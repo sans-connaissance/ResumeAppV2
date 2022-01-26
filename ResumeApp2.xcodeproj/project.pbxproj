@@ -19,6 +19,9 @@
 		4125DDB527A0F70C00DA70EB /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125DDB427A0F70C00DA70EB /* Resume.swift */; };
 		4125DDB627A0F70C00DA70EB /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125DDB427A0F70C00DA70EB /* Resume.swift */; };
 		4125DDB727A0F70C00DA70EB /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125DDB427A0F70C00DA70EB /* Resume.swift */; };
+		4125DDBA27A0F84B00DA70EB /* ResumeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125DDB927A0F84B00DA70EB /* ResumeStore.swift */; };
+		4125DDBB27A0F84B00DA70EB /* ResumeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125DDB927A0F84B00DA70EB /* ResumeStore.swift */; };
+		4125DDBC27A0F84B00DA70EB /* ResumeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125DDB927A0F84B00DA70EB /* ResumeStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,7 @@
 		4125DDA427A0F4D700DA70EB /* ResumeApp2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeApp2UITests.swift; sourceTree = "<group>"; };
 		4125DDA627A0F4D700DA70EB /* ResumeApp2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeApp2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4125DDB427A0F70C00DA70EB /* Resume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		4125DDB927A0F84B00DA70EB /* ResumeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		4125DD8327A0F4D500DA70EB /* ResumeApp2 */ = {
 			isa = PBXGroup;
 			children = (
+				4125DDB827A0F83700DA70EB /* Helpers */,
 				4125DDB327A0F6C600DA70EB /* Model */,
 				4125DD8427A0F4D500DA70EB /* ResumeApp2App.swift */,
 				4125DD8627A0F4D500DA70EB /* ContentView.swift */,
@@ -144,6 +149,14 @@
 				4125DDB427A0F70C00DA70EB /* Resume.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4125DDB827A0F83700DA70EB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4125DDB927A0F84B00DA70EB /* ResumeStore.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +293,7 @@
 				4125DDB527A0F70C00DA70EB /* Resume.swift in Sources */,
 				4125DD8727A0F4D500DA70EB /* ContentView.swift in Sources */,
 				4125DD8527A0F4D500DA70EB /* ResumeApp2App.swift in Sources */,
+				4125DDBA27A0F84B00DA70EB /* ResumeStore.swift in Sources */,
 				4125DD9127A0F4D700DA70EB /* ResumeApp2.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4125DDB627A0F70C00DA70EB /* Resume.swift in Sources */,
+				4125DDBB27A0F84B00DA70EB /* ResumeStore.swift in Sources */,
 				4125DD9B27A0F4D700DA70EB /* ResumeApp2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +314,7 @@
 			files = (
 				4125DDB727A0F70C00DA70EB /* Resume.swift in Sources */,
 				4125DDA727A0F4D700DA70EB /* ResumeApp2UITestsLaunchTests.swift in Sources */,
+				4125DDBC27A0F84B00DA70EB /* ResumeStore.swift in Sources */,
 				4125DDA527A0F4D700DA70EB /* ResumeApp2UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
