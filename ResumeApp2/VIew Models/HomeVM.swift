@@ -26,5 +26,21 @@ class HomeVM: ObservableObject {
                 educationArray.append(item)
             }
         }
+        if let workItems: [Work] = davidMalicke.work {
+            for item in workItems {
+                experienceArray.append(item)
+            }
+        }
+        if let projectItems: [Project] = davidMalicke.projects {
+            for item in projectItems {
+                projectArray.append(item)
+            }
+        }
+        if let certificateItem: [Certificate] = davidMalicke.certificates {
+            for item in certificateItem {
+                certificateArray.append(item)
+            }
+        }
+        
     }
 }
