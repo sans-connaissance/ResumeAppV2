@@ -10,10 +10,14 @@ import SwiftUI
 
 class HomeVM: ObservableObject {
     
+    @Published var resume: Resume = davidMalicke
+    
     @Published var educationArray: [Education] = []
     @Published var experienceArray: [Work] = []
     @Published var projectArray: [Project] = []
     @Published var certificateArray: [Certificate] = []
+    @Published var skillArray: [Skill] = []
+    
     
     init() {
         setupResumeItems()
@@ -40,6 +44,16 @@ class HomeVM: ObservableObject {
             for item in certificateItem {
                 certificateArray.append(item)
             }
+        }
+        //Can this be done differently so that in the view we're not adding [0] to end of variable call.
+        if let skillItems: [Skill] = davidMalicke.skills {
+            for item in skillItems {
+                skillArray.append(item)
+            }
+        }
+        
+        if let basics = davidMalicke.basics {
+            
         }
         
     }

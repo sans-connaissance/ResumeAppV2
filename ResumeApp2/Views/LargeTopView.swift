@@ -27,24 +27,27 @@ struct LargeTopView: View {
     
     var body: some View {
         ZStack {
-            if let imageString = basics.url {
-            KFImage(URL(string: imageString))
-                .resizable()
-                .scaledToFill()
-                .clipped()
+            if let imageString = basics.image {
+                KFImage(URL(string: imageString))
+                    .resizable()
+                    .scaledToFill()
+                    .clipped()
             }
-
+            
             VStack {
                 Spacer()
-                HStack {
-                    ForEach(skill.keywords!, id: \.self) { category in
-                        HStack {
-                            Text(category)
-                                .font(.footnote)
-                            if !isLastCategory(category) {
-                                Image(systemName: "circle.fill")
-                                    .foregroundColor(.blue)
-                                    .font(.system(size: 3))
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        
+                        ForEach(skill.keywords!, id: \.self) { category in
+                            HStack {
+                                Text(category)
+                                    .font(.footnote)
+                                if !isLastCategory(category) {
+                                    Image(systemName: "circle.fill")
+                                        .foregroundColor(.blue)
+                                        .font(.system(size: 3))
+                                }
                             }
                         }
                     }
@@ -56,7 +59,7 @@ struct LargeTopView: View {
                     }
                     Spacer()
                     WhiteButton(text: "play", imageName: "play.fill") {
-
+                        
                     }.frame(width: 120)
                     Spacer()
                     SmallVerticalButton(text: "Info", isOnImage: "info.circle", isOffImage: "info.circle", isOn: true) {
@@ -70,8 +73,8 @@ struct LargeTopView: View {
     }
 }
 
-//struct LargeTopView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LargeTopView()
-//    }
-//}
+struct LargeTopView_Previews: PreviewProvider {
+    static var previews: some View {
+        LargeTopView(skill: davidMalicke.skills![0], basics: davidMalicke.basics!)
+    }
+}
