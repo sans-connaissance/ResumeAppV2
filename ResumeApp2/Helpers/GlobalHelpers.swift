@@ -22,7 +22,6 @@ struct SmallButton: ViewModifier {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
             .padding(.leading)
-        
     }
 }
 
@@ -33,9 +32,6 @@ struct MediumButton: ViewModifier {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
             .padding(.leading)
-        
-            
-        
     }
 }
 
@@ -46,13 +42,10 @@ struct LargeButton: ViewModifier {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
             .padding(.leading)
-        
     }
 }
 
-
 enum Category: String, CaseIterable {
-
     case appStore
     case dataStructures
     case demos
@@ -60,7 +53,7 @@ enum Category: String, CaseIterable {
     case experience
     case iOSTraining
     case projects
-    
+
     var title: String {
         switch self {
         case .appStore:
