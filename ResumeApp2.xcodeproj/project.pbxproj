@@ -32,6 +32,9 @@
 		414EC0CC27A37F5C00C1C25F /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CB27A37F5C00C1C25F /* HomeVM.swift */; };
 		414EC0CD27A37F5C00C1C25F /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CB27A37F5C00C1C25F /* HomeVM.swift */; };
 		414EC0CE27A37F5C00C1C25F /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CB27A37F5C00C1C25F /* HomeVM.swift */; };
+		414EC0D027A3810B00C1C25F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CF27A3810B00C1C25F /* HomeView.swift */; };
+		414EC0D127A3810B00C1C25F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CF27A3810B00C1C25F /* HomeView.swift */; };
+		414EC0D227A3810B00C1C25F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CF27A3810B00C1C25F /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,7 @@
 		4125DDBE27A37B9400DA70EB /* ResumeItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItemImageView.swift; sourceTree = "<group>"; };
 		4125DDC527A37D5500DA70EB /* GlobalHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		414EC0CB27A37F5C00C1C25F /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		414EC0CF27A3810B00C1C25F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				4125DD8627A0F4D500DA70EB /* ContentView.swift */,
+				414EC0CF27A3810B00C1C25F /* HomeView.swift */,
 				4125DDBE27A37B9400DA70EB /* ResumeItemImageView.swift */,
 			);
 			path = Views;
@@ -331,6 +336,7 @@
 				4125DD8E27A0F4D700DA70EB /* Persistence.swift in Sources */,
 				4125DDB527A0F70C00DA70EB /* Resume.swift in Sources */,
 				4125DDC627A37D5500DA70EB /* GlobalHelpers.swift in Sources */,
+				414EC0D027A3810B00C1C25F /* HomeView.swift in Sources */,
 				414EC0CC27A37F5C00C1C25F /* HomeVM.swift in Sources */,
 				4125DDBF27A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
 				4125DD8727A0F4D500DA70EB /* ContentView.swift in Sources */,
@@ -345,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4125DDB627A0F70C00DA70EB /* Resume.swift in Sources */,
+				414EC0D127A3810B00C1C25F /* HomeView.swift in Sources */,
 				4125DDBB27A0F84B00DA70EB /* ResumeStore.swift in Sources */,
 				4125DDC727A37D5500DA70EB /* GlobalHelpers.swift in Sources */,
 				414EC0CD27A37F5C00C1C25F /* HomeVM.swift in Sources */,
@@ -362,6 +369,7 @@
 				414EC0CE27A37F5C00C1C25F /* HomeVM.swift in Sources */,
 				4125DDC127A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
 				4125DDA727A0F4D700DA70EB /* ResumeApp2UITestsLaunchTests.swift in Sources */,
+				414EC0D227A3810B00C1C25F /* HomeView.swift in Sources */,
 				4125DDBC27A0F84B00DA70EB /* ResumeStore.swift in Sources */,
 				4125DDA527A0F4D700DA70EB /* ResumeApp2UITests.swift in Sources */,
 			);
