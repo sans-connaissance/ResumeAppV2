@@ -10,8 +10,6 @@ import SwiftUI
 
 class HomeVM: ObservableObject {
     
-    @Published var resume: Resume = davidMalicke
-    
     @Published var educationArray: [Education] = []
     @Published var experienceArray: [Work] = []
     @Published var projectArray: [Project] = []
@@ -20,14 +18,26 @@ class HomeVM: ObservableObject {
     
     
     init() {
-        setupResumeItems()
+        setupResumeArrays()
+        
     }
     
+    static var resume: Resume {
+        return davidMalicke
+    }
+    //How does this work in the real app?
+    //OR is it that you initialize a blank type?
+    //Probably have to unwrap an array.
+    @Published var basics = davidMalicke.basics!
+        
     //is this were future calls will go to pull from server?
-    func setupResumeItems() {
+    func setupResumeArrays() {
+        
         if let educationItems: [Education] = davidMalicke.education {
             for item in educationItems {
+                if item.studyType == "formal" {
                 educationArray.append(item)
+                }
             }
         }
         if let workItems: [Work] = davidMalicke.work {
@@ -51,10 +61,5 @@ class HomeVM: ObservableObject {
                 skillArray.append(item)
             }
         }
-        
-        if let basics = davidMalicke.basics {
-            
-        }
-        
     }
 }
