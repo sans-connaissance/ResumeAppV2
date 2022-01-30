@@ -46,30 +46,45 @@ struct LargeButton: ViewModifier {
 }
 
 enum Category: String, CaseIterable {
-    case appStore
-    case dataStructures
-    case demos
+    case work
+    case volunteer
     case education
-    case experience
-    case iOSTraining
-    case projects
+    case award
+    case certificate
+    case publication
+    case skill
+    case language
+    case interest
+    case reference
+    case project
+    case video
 
     var title: String {
         switch self {
-        case .appStore:
-            return "Apps"
-        case .dataStructures:
-            return "Data Structures"
-        case .demos:
-            return "Demos"
+        case .work:
+            return "Experience"
+        case .volunteer:
+            return "Return"
         case .education:
             return "Education"
-        case .experience:
-            return "Experience"
-        case .iOSTraining:
-            return "iOS Training"
-        case .projects:
+        case .award:
+            return "Awards"
+        case .certificate:
+            return "Certificates"
+        case .publication:
+            return "Publications"
+        case .skill:
+            return "Skills"
+        case .language:
+            return "Languages"
+        case .interest:
+            return "Interests"
+        case .reference:
+            return "References"
+        case .project:
             return "Projects"
+        case .video:
+            return "Videos"
         }
     }
 }

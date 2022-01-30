@@ -223,5 +223,6 @@ let umSalaryPub = Project(
     roles: ["Lead iOS Developer", "UX Designer", "Publisher"],
     entity: "Frankfurt Industries",
     type: "App", // probably needs to be an enum
+    thumbnail: "https://picsum.photos/200/301",
     thumbnails: ["https://picsum.photos/200/301", "https://picsum.photos/200/302", "https://picsum.photos/200/303"],
     videos: nil)

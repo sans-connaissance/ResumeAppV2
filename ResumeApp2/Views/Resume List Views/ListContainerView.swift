@@ -13,8 +13,31 @@ struct ListContainerView: View {
     var size: Size
     
     var body: some View {
-        if category == .education {
-            EducationListView(vm: vm, size: size)
+        
+        if category == .work {
+            WorkListView(vm: vm, size: size)
+        } else if category == .volunteer {
+            VolunteerListView(vm: vm, size: size)
+        } else if category == .volunteer {
+            VolunteerListView(vm: vm, size: size)
+        } else if category == .volunteer {
+            VolunteerListView(vm: vm, size: size)
+        } else if category == .volunteer {
+            VolunteerListView(vm: vm, size: size)
+        } else if category == .volunteer {
+            VolunteerListView(vm: vm, size: size)
+        } else if category == .volunteer {
+            VolunteerListView(vm: vm, size: size)
+        } else if category == .volunteer {
+            VolunteerListView(vm: vm, size: size)
+        } else if category == .volunteer {
+            VolunteerListView(vm: vm, size: size)
+        } else if category == .volunteer {
+            VolunteerListView(vm: vm, size: size)
+        } else if category == .volunteer {
+            VolunteerListView(vm: vm, size: size)
+        } else {
+            VolunteerListView(vm: vm, size: size)
         }
     }
 }
