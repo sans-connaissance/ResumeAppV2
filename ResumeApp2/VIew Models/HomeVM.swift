@@ -10,12 +10,18 @@ import SwiftUI
 
 class HomeVM: ObservableObject {
     
-    @Published var educationArray: [Education] = []
     @Published var experienceArray: [Work] = []
-    @Published var projectArray: [Project] = []
+    @Published var volunteerArray: [Volunteer] = []
+    @Published var educationArray: [Education] = []
+    @Published var awardArray: [Award] = []
     @Published var certificateArray: [Certificate] = []
+    @Published var publicationArray: [Publication] = []
     @Published var skillArray: [Skill] = []
-    
+    @Published var languageArray: [Language] = []
+    @Published var interestArray: [Interest] = []
+    @Published var referenceArray: [Reference] = []
+    @Published var projectArray: [Project] = []
+    @Published var videoArray: [Video] = []
     
     init() {
         setupResumeArrays()

@@ -73,3 +73,9 @@ enum Category: String, CaseIterable {
         }
     }
 }
+
+enum Size: String, CaseIterable {
+    case small
+    case medium
+    case large
+}

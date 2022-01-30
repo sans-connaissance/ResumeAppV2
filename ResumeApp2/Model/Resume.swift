@@ -127,6 +127,7 @@ struct Skill: Identifiable {
     var id: String
     var name: String?
     var level: String?
+    var thumbnail: String?
     var keywords: [String]?
 }
 
@@ -134,18 +135,21 @@ struct Language: Identifiable {
     var id: String
     var language: String?
     var fluency: String?
+    var thumbnail: String?
 }
 
 struct Interest: Identifiable {
     var id: String
     var name: String?
     var keywords: [String]?
+    var thumbnail: String?
 }
 
 struct Reference: Identifiable {
     var id: String
     var name: String?
     var reference: String?
+    var thumbnail: String?
 }
 
 struct Project: Identifiable {
@@ -160,6 +164,7 @@ struct Project: Identifiable {
     var roles: [String]?
     var entity: String?
     var type: String?
+    var thumbnail: String?
     var thumbnails: [String]?
     var videos: [Video]?
 }

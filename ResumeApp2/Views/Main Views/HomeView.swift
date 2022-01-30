@@ -18,11 +18,11 @@ struct HomeView: View {
                 ScrollView(showsIndicators: false) {
                     // change this to VStack to remove skipping while running
                     LazyVStack {
-                        // MARK TODO: Better approach to adding skills and basics arrays here.
                         LargeTopView(skill:  vm.skillArray[0], basics: vm.basics)
                             .frame(width: screen.width)
                             .padding(.top, -110)
-                        ListContainerView(vm: vm, category: .education)
+                        ListContainerView(vm: vm, category: .education, size: .large)
+                        
 
                     }
                 }

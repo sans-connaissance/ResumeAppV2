@@ -10,10 +10,11 @@ import SwiftUI
 struct ListContainerView: View {
     var vm: HomeVM
     var category: Category
+    var size: Size
     
     var body: some View {
         if category == .education {
-            EducationList(vm: vm)
+            EducationListView(vm: vm, size: size)
         }
     }
 }

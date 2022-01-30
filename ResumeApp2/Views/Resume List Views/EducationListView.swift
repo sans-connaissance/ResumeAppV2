@@ -1,5 +1,5 @@
 //
-//  SmallResumeItemListView.swift
+//  ResumeListByItem.swift
 //  ResumeApp2
 //
 //  Created by David Malicke on 1/29/22.
@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct SmallResumeItemListView: View {
-    
+struct EducationListView: View {
     var vm: HomeVM
-    var category: Category
+    var size: Size
     
     var body: some View {
         VStack {
             HStack {
-                Text(category.title)
+                Text("Education")
                     .font(.title3)
                     .bold()
                     .padding(.leading)
@@ -23,18 +22,22 @@ struct SmallResumeItemListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    
-                    //can I add a switch here for switching to different category types?
-                    //can pass in the size for each one
-                    //then create different types with overlays etc.
                     ForEach(vm.educationArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
                             VStack {
                                 if let imageString = resumeItem.thumbnail {
-                                ResumeItemImageView(imageString: imageString)
-                                    .modifier(SmallButton())
+                                    if size == .small {
+                                        ResumeItemImageView(imageString: imageString)
+                                            .modifier(SmallButton())
+                                    } else if size == .medium {
+                                        ResumeItemImageView(imageString: imageString)
+                                            .modifier(MediumButton())
+                                    } else if size == .large {
+                                        ResumeItemImageView(imageString: imageString)
+                                            .modifier(LargeButton())
+                                    }
                                 }
                             }
                         }
@@ -48,8 +51,8 @@ struct SmallResumeItemListView: View {
     }
 }
 
-//struct SmallResumeItemListView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SmallResumeItemListView()
-//    }
-//}
+struct EducationListView_Previews: PreviewProvider {
+    static var previews: some View {
+        EducationListView(vm: HomeVM(), size: .small)
+    }
+}
