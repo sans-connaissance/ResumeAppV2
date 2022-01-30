@@ -8,7 +8,6 @@ import Kingfisher
 import SwiftUI
 
 struct ResumeItemImageView: View {
-    
     var imageString: String
     
     var body: some View {

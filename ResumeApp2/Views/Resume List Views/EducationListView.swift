@@ -24,7 +24,7 @@ struct EducationListView: View {
                 LazyHStack(spacing: -6) {
                     ForEach(vm.educationArray) { resumeItem in
                         NavigationLink {
-                            //ResumeItemDetailView(resumeItem: resumeItem)
+                            EducationDetailView(resumeItem: resumeItem)
                         } label: {
                             VStack {
                                 if let imageString = resumeItem.thumbnail {
