@@ -13,31 +13,42 @@ struct ListContainerView: View {
     var size: Size
     
     var body: some View {
-        
         if category == .work {
             WorkListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
         } else if category == .volunteer {
             VolunteerListView(vm: vm, size: size)
-        } else if category == .volunteer {
-            VolunteerListView(vm: vm, size: size)
-        } else if category == .volunteer {
-            VolunteerListView(vm: vm, size: size)
-        } else if category == .volunteer {
-            VolunteerListView(vm: vm, size: size)
-        } else if category == .volunteer {
-            VolunteerListView(vm: vm, size: size)
-        } else if category == .volunteer {
-            VolunteerListView(vm: vm, size: size)
-        } else if category == .volunteer {
-            VolunteerListView(vm: vm, size: size)
-        } else if category == .volunteer {
-            VolunteerListView(vm: vm, size: size)
-        } else if category == .volunteer {
-            VolunteerListView(vm: vm, size: size)
-        } else if category == .volunteer {
-            VolunteerListView(vm: vm, size: size)
-        } else {
-            VolunteerListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
+        } else if category == .education {
+            EducationListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
+        } else if category == .award {
+            AwardListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
+        } else if category == .certificate {
+            CertificateListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
+        } else if category == .publication {
+            PublicationListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
+        } else if category == .skill {
+            SkillListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
+        } else if category == .language {
+            LanguageListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
+        } else if category == .interest {
+            InterestListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
+        } else if category == .reference {
+            ReferenceListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
+        } else if category == .project {
+            ProjectListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
+        } else if category == .video {
+            VideoListView(vm: vm, size: size)
+                .background(LinearGradient.blackOpacityGradient)
         }
     }
 }

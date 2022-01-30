@@ -46,7 +46,7 @@ struct CertificateListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-            .background(LinearGradient.blackOpacityGradient)
+          //  .background(LinearGradient.blackOpacityGradient)
         }
     }
 }

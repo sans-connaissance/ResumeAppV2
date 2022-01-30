@@ -21,9 +21,9 @@ struct HomeView: View {
                         LargeTopView(skill:  vm.skillArray[0], basics: vm.basics)
                             .frame(width: screen.width)
                             .padding(.top, -110)
-
-                        ListContainerView(vm: vm, category: .education, size: .large)
-                        
+                        ListContainerView(vm: vm, category: .project, size: .large)
+                        ListContainerView(vm: vm, category: .work, size: .medium)
+                        ListContainerView(vm: vm, category: .education, size: .small)
 
                     }
                 }
