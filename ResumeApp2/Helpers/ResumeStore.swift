@@ -81,6 +81,7 @@ let masterDegree = Education(
               "SI 572: Database Application Design",
               "SI 622: Needs Assessment and Usability Evaluation",
               "SI 631: Content Management Systems"], // add all courses
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et pulvinar justo. Fusce nibh justo, lacinia ac congue a, ultricies ut tortor. Donec commodo leo a sagittis fermentum. Quisque varius euismod urna, in euismod magna mollis a. Phasellus hendrerit ultricies consequat. Integer gravida ornare arcu vitae varius. Ut dapibus tortor et vehicula condimentum. Donec iaculis massa quis maximus viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat quam, consectetur eget magna at, consectetur sollicitudin tellus",
     thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Horace_H._Rackham_School_of_Graduate_Studies_%28March_2008%29.jpg/640px-Horace_H._Rackham_School_of_Graduate_Studies_%28March_2008%29.jpg")
 
 let bachelorDegree = Education(

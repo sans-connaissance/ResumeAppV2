@@ -92,6 +92,7 @@ struct Education: Identifiable {
     var endDate: String?
     var score: String?
     var courses: [String]?
+    var description: String?
     var thumbnail: String?
 }
 
