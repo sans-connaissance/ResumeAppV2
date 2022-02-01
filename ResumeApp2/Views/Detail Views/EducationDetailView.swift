@@ -9,56 +9,82 @@ import Kingfisher
 import SwiftUI
 
 struct EducationDetailView: View {
+    // @StateObject private var vm = EducationDetailVM()
     var resumeItem: Education
     let screen = UIScreen.main.bounds
     
     var body: some View {
-        
         VStack {
             ScrollView(showsIndicators: false) {
-                //TopImage
+                // TopImage
                 ZStack {
                     if let imageString = resumeItem.thumbnail {
                         ResumeItemImageView(imageString: imageString)
                             .frame(width: screen.width)
-                            .padding(.top, -110)
-                            .padding(.bottom)
+                            .padding(.top, -50)
+                        //    .padding(.bottom)
                     }
                 }
-                //Rather than all these if lets... create a view model that calls everything based on the id passed in
                 Spacer()
-                HStack{
-                    Text(resumeItem.institution!)
+                EducationTitleView(resumeItem: resumeItem)
+            }
+        }
+        //  .onAppear(perform: {vm.unwrap(resumeItem: resumeItem)})
+    }
+}
+
+struct EducationTitleView: View {
+    
+    var resumeItem: Education
+    
+    var body: some View {
+        VStack {
+            if let institution = resumeItem.institution {
+                HStack {
+                    
+                    Text(institution)
                         .font(.title)
-                        .fontWeight(.medium)
+                        .fontWeight(.heavy)
                         .padding(.leading)
                     Spacer()
                 }
-                HStack{
-                    Text(resumeItem.schoolName!)
+            }
+            if let schoolName = resumeItem.schoolName {
+                HStack {
+                    Spacer()
+                    Text(schoolName)
                         .font(.title2)
-                        .fontWeight(.medium)
-                        .padding(.leading)
-                    Spacer()
+                        .fontWeight(.heavy)
+                        .padding(.trailing)
+                        .padding(.bottom)
+                    //Spacer()
                 }
-                HStack{
-                    Text(resumeItem.degreeName!)
-                        .font(.title3)
-                        .fontWeight(.medium)
-                        .padding(.leading)
-                    Spacer()
+            }
+            
+            VStack {
+                if let degreeName = resumeItem.degreeName {
+                    HStack {
+                        Text(degreeName)
+                            .font(.body)
+                            .fontWeight(.light)
+                            .padding(.leading)
+                        Spacer()
+                    }
                 }
-                HStack{
-                    Text(resumeItem.specialization!)
-                        .font(.title3)
-                        .fontWeight(.regular)
-                        .padding(.leading)
-                    Spacer()
+                if let specialization = resumeItem.specialization {
+                    HStack {
+                        Text(specialization)
+                            .font(.title3)
+                            .fontWeight(.light)
+                            .padding(.leading)
+                        Spacer()
+                    }
                 }
             }
         }
     }
 }
+
 
 struct EducationDetailView_Previews: PreviewProvider {
     static var previews: some View {
