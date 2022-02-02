@@ -12,6 +12,7 @@ struct ListContainerView: View {
     var category: Category
     var size: Size
     
+    // MAYBE HAVE TO USE ANY HERE. then USE @VIEWBUILDER TO BUILD FROM A GENERIC VIEW BASED ON WHAT WAS PASSED INTO ANY.
     var body: some View {
         if category == .work {
             WorkListView(vm: vm, size: size)

@@ -9,6 +9,7 @@ import Kingfisher
 import SwiftUI
 
 struct EducationDetailView: View {
+    @StateObject private var vm = EducationDetailVM()
     var resumeItem: Education
 
     var body: some View {
@@ -29,8 +30,10 @@ struct EducationDetailView: View {
             }.padding(.bottom)
             VStack(alignment: .leading) {
                 EducationDescriptionView(resumeItem: resumeItem)
+                // ListContainerView(vm: vm, category: .education, size: .small)
+
             }.padding(.leading)
-        }
+        }.onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
     }
 }
 
