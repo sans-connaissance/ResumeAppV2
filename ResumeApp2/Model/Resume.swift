@@ -82,16 +82,15 @@ struct Volunteer: Identifiable {
 struct Education: Identifiable {
     var id: String
     var institution: String?
-    var schoolName: String?
-    var degreeName: String?
-    var specialization: String?
-    var url: String?
-    var area: String?
     var studyType: String?
+    var area: String?
+    var url: String?
+    var location: String?
     var startDate: String?
     var endDate: String?
     var score: String?
     var courses: [String]?
+    var educationType: String?
     var description: String?
     var thumbnail: String?
 }

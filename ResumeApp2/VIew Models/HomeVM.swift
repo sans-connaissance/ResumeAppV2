@@ -41,7 +41,7 @@ class HomeVM: ObservableObject {
         
         if let educationItems: [Education] = davidMalicke.education {
             for item in educationItems {
-                if item.studyType == "formal" {
+                if item.educationType == "formal" {
                 educationArray.append(item)
                 }
             }
