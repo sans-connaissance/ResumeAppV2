@@ -27,18 +27,17 @@ struct WhiteButton: View {
 
             }
             .padding(.vertical, 6)
-            .foregroundColor(.black)
-            .background(Color.white)
+            .foregroundColor(.white)
+            .background(Color.black)
             .cornerRadius(3.0)
         }
+        .padding([.leading, .trailing])
     }
 }
 
 struct WhiteButton_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.black
-                .edgesIgnoringSafeArea(.all)
             WhiteButton(text: "Play", imageName: "play.fill") {
                 //
             }
