@@ -10,7 +10,7 @@ import SwiftUI
 
 extension LinearGradient {
     static let blackOpacityGradient = LinearGradient(
-        gradient: Gradient(colors: [Color.gray.opacity(0.01), Color.black.opacity(0.10)]),
+        gradient: Gradient(colors: [Color.gray.opacity(0.01), Color.gray.opacity(0.30)]),
         startPoint: .top,
         endPoint: .bottom)
 }

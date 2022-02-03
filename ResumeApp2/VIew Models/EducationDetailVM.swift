@@ -9,7 +9,10 @@ import Foundation
 import SwiftUI
 
 class EducationDetailVM: ObservableObject {
+    
+    //THIS NEEDS TO BE RENAMED DOESN"T MAKE SENSE
     @Published var educationDetailViewArray: [Education] = []
+    @Published var educationDetailViewProjects: [Project] = []
     
 //    init() {
 //        setupEducationArrays()
@@ -20,6 +23,14 @@ class EducationDetailVM: ObservableObject {
             for item in educationItems {
                 if item.id != resumeItem.id && item.educationType == "formal" {
                     educationDetailViewArray.append(item)
+                }
+            }
+        }
+        
+        if let educationProjects: [Project] = davidMalicke.projects {
+            for item in educationProjects {
+                if item.entity == "Master Degree" {
+                    educationDetailViewProjects.append(item)
                 }
             }
         }

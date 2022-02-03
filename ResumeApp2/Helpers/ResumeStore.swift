@@ -20,7 +20,7 @@ let davidMalicke = Resume(
     languages: [english, french],
     interests: nil,
     references: nil,
-    projects: [umSalaryPub])
+    projects: [umSalaryPub, annArborArtCenter])
 
 let basics = Basics(
     id: UUID().uuidString,

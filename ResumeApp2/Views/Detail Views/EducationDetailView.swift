@@ -13,7 +13,6 @@ struct EducationDetailView: View {
     var resumeItem: Education
     
     var body: some View {
-        
         ScrollView(showsIndicators: false) {
             VStack(alignment: .center) {
                 EducationImageView(resumeItem: resumeItem)
@@ -32,8 +31,14 @@ struct EducationDetailView: View {
             VStack(alignment: .leading) {
                 EducationDescriptionView(resumeItem: resumeItem)
             }.padding(.leading)
+            
+            //THESE NEED TO BE MADE CONDITIONAL IN CASE THEY DONT EXIST
             ScrollView(showsIndicators: false) {
+                LazyVStack {
                     ListContainerView(array: vm.educationDetailViewArray, category: .education, size: .medium)
+                        
+                    ListContainerView(array: vm.educationDetailViewProjects, category: .project, size: .small)
+                }
             }
 
         }
