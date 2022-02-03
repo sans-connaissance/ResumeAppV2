@@ -222,3 +222,19 @@ let umSalaryPub = Project(
     thumbnail: "https://picsum.photos/200/301",
     thumbnails: ["https://picsum.photos/200/301", "https://picsum.photos/200/302", "https://picsum.photos/200/303"],
     videos: nil)
+
+let annArborArtCenter = Project(
+    id: UUID().uuidString,
+    name: "Ann Arbor Art Center",
+    description: "Contextual Inquiry to determine internal communication issues.",
+    highlights: ["List of a bunch of things about the project", "Another list of things"],
+    keywords: ["Consultation", "Process", "Contextual Inquiry"],
+    startDate: "2020-11-01",
+    endDate: "2021-04-01",
+    url: "https://apps.apple.com/us/app/um-salarypub/id1564602975",
+    roles: ["Lead iOS Developer", "UX Designer", "Publisher"],
+    entity: "Master Degree",
+    type: "Student Project", // probably needs to be an enum
+    thumbnail: "https://www.mlive.com/resizer/tl5HqUHf3rcnt_ijY5avRjYEohk=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/NR7AIFZ6EJEFDBK65FWP6KQ2RA.jpg",
+    thumbnails: ["https://picsum.photos/200/301", "https://picsum.photos/200/302", "https://picsum.photos/200/303"],
+    videos: nil)

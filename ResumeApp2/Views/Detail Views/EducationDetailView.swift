@@ -13,6 +13,7 @@ struct EducationDetailView: View {
     var resumeItem: Education
     
     var body: some View {
+        
         ScrollView(showsIndicators: false) {
             VStack(alignment: .center) {
                 EducationImageView(resumeItem: resumeItem)
@@ -30,14 +31,14 @@ struct EducationDetailView: View {
             }.padding(.bottom)
             VStack(alignment: .leading) {
                 EducationDescriptionView(resumeItem: resumeItem)
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack {
-                        ListContainerView(array: vm.educationDetailViewArray, category: .education, size: .small)
-                    }
-                }
-                
             }.padding(.leading)
-        }.onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
+            ScrollView(showsIndicators: false) {
+                    ListContainerView(array: vm.educationDetailViewArray, category: .education, size: .medium)
+            }
+
+        }
+      //  .navigationBarHidden(true)
+        .onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
     }
 }
 
