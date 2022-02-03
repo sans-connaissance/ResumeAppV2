@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProjectListView: View {
-    var vm: HomeVM
+    var projectArray: [Project]
     var size: Size
     
     var body: some View {
@@ -22,7 +22,7 @@ struct ProjectListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.projectArray) { resumeItem in
+                    ForEach(projectArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -46,13 +46,15 @@ struct ProjectListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-//            .background(LinearGradient.blackOpacityGradient)
+            //            .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
 
 struct ProjectListView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectListView(vm: HomeVM(), size: .small)
+        if let projectArray = davidMalicke.projects {
+            ProjectListView(projectArray: projectArray, size: .small)
+        }
     }
 }

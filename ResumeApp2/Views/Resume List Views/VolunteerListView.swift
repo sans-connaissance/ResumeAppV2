@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct VolunteerListView: View {
-    var vm: HomeVM
+    var volunteerArray: [Volunteer]
     var size: Size
     
     var body: some View {
@@ -22,7 +22,7 @@ struct VolunteerListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.volunteerArray) { resumeItem in
+                    ForEach(volunteerArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -46,7 +46,7 @@ struct VolunteerListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-           // .background(LinearGradient.blackOpacityGradient)
+            // .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
@@ -54,6 +54,8 @@ struct VolunteerListView: View {
 
 struct VolunteerListView_Previews: PreviewProvider {
     static var previews: some View {
-        VolunteerListView(vm: HomeVM(), size: .medium)
+        if let volunteerArray = davidMalicke.volunteer {
+            VolunteerListView(volunteerArray: volunteerArray, size: .medium)
+        }
     }
 }

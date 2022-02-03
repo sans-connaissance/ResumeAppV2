@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AwardListView: View {
-    var vm: HomeVM
+    var awardArray: [Award]
     var size: Size
     
     
@@ -23,7 +23,7 @@ struct AwardListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.awardArray) { resumeItem in
+                    ForEach(awardArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -47,7 +47,7 @@ struct AwardListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-           // .background(LinearGradient.blackOpacityGradient)
+            // .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
@@ -55,6 +55,8 @@ struct AwardListView: View {
 
 struct AwardListView_Previews: PreviewProvider {
     static var previews: some View {
-        AwardListView(vm: HomeVM(), size: .large)
+        if let awardArray = davidMalicke.awards {
+            AwardListView(awardArray: awardArray, size: .large)
+        }
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EducationListView: View {
-    var vm: HomeVM
+    var educationArray: [Education]
     var size: Size
     
     var body: some View {
@@ -22,7 +22,7 @@ struct EducationListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.educationArray) { resumeItem in
+                    ForEach(educationArray) { resumeItem in
                         NavigationLink {
                             EducationDetailView(resumeItem: resumeItem)
                         } label: {
@@ -46,13 +46,15 @@ struct EducationListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-           // .background(LinearGradient.blackOpacityGradient)
+            // .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
 
 struct EducationListView_Previews: PreviewProvider {
     static var previews: some View {
-        EducationListView(vm: HomeVM(), size: .small)
+        if let educationArray = davidMalicke.education {
+            EducationListView(educationArray: educationArray, size: .small)
+        }
     }
 }

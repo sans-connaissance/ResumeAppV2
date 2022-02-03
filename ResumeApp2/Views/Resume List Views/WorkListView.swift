@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WorkListView: View {
-    var vm: HomeVM
+    var workArray: [Work]
     var size: Size
     
     var body: some View {
@@ -22,7 +22,7 @@ struct WorkListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.experienceArray) { resumeItem in
+                    ForEach(workArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -46,13 +46,15 @@ struct WorkListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-           //.background(LinearGradient.blackOpacityGradient)
+            //.background(LinearGradient.blackOpacityGradient)
         }
     }
 }
 
 struct WorkListView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkListView(vm: HomeVM(), size: .small)
+        if let workArray = davidMalicke.work {
+            WorkListView(workArray: workArray, size: .small)
+        }
     }
 }

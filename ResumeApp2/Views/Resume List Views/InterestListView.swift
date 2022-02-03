@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InterestListView: View {
-    var vm: HomeVM
+    var interestArray: [Interest]
     var size: Size
     
     
@@ -23,7 +23,7 @@ struct InterestListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.interestArray) { resumeItem in
+                    ForEach(interestArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -47,13 +47,15 @@ struct InterestListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-          //  .background(LinearGradient.blackOpacityGradient)
+            //  .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
 
 struct InterestListView_Previews: PreviewProvider {
     static var previews: some View {
-        InterestListView(vm: HomeVM(), size: .small)
+        if let interestArray = davidMalicke.interests {
+            InterestListView(interestArray: interestArray, size: .small)
+        }
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct EducationDetailView: View {
     @StateObject private var vm = EducationDetailVM()
     var resumeItem: Education
-
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .center) {
@@ -21,17 +21,21 @@ struct EducationDetailView: View {
                 VStack(alignment: .center) {
                     EducationStudyTypeView(resumeItem: resumeItem)
                     EducationAreaView(resumeItem: resumeItem)
-
+                    
                 }.padding(.bottom, -1)
-
+                
                 EducationInfoView(resumeItem: resumeItem)
                     .padding(.bottom)
                 WhiteButton(text: "Courses", imageName: "book") {}
             }.padding(.bottom)
             VStack(alignment: .leading) {
                 EducationDescriptionView(resumeItem: resumeItem)
-                // ListContainerView(vm: vm, category: .education, size: .small)
-
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack {
+                        ListContainerView(array: vm.educationDetailViewArray, category: .education, size: .small)
+                    }
+                }
+                
             }.padding(.leading)
         }.onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
     }
@@ -39,7 +43,7 @@ struct EducationDetailView: View {
 
 struct EducationDescriptionView: View {
     var resumeItem: Education
-
+    
     var body: some View {
         if let description = resumeItem.description {
             Text("Description")
@@ -78,7 +82,7 @@ struct EducationTagView: View {
 
 struct EducationInfoView: View {
     var resumeItem: Education
-
+    
     var body: some View {
         HStack {
             if let startDate = resumeItem.startDate {
@@ -120,7 +124,7 @@ struct EducationInfoView: View {
 
 struct EducationInstitutionView: View {
     var resumeItem: Education
-
+    
     var body: some View {
         if let institution = resumeItem.institution {
             Text(institution)
@@ -133,7 +137,7 @@ struct EducationInstitutionView: View {
 
 struct EducationStudyTypeView: View {
     var resumeItem: Education
-
+    
     var body: some View {
         if let studyType = resumeItem.studyType {
             Text(studyType)
@@ -147,7 +151,7 @@ struct EducationStudyTypeView: View {
 
 struct EducationAreaView: View {
     var resumeItem: Education
-
+    
     var body: some View {
         if let area = resumeItem.area {
             Text(area)

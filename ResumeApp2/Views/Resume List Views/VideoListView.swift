@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct VideoListView: View {
-    var vm: HomeVM
+    var videoArray: [Video]
     var size: Size
     
     var body: some View {
@@ -22,7 +22,7 @@ struct VideoListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.videoArray) { resumeItem in
+                    ForEach(videoArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -51,8 +51,8 @@ struct VideoListView: View {
     }
 }
 
-struct VideoListView_Previews: PreviewProvider {
-    static var previews: some View {
-        VideoListView(vm: HomeVM(), size: .small)
-    }
-}
+//struct VideoListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VideoListView(videoArray: , size: .small)
+//    }
+//}

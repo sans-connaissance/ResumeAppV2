@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LanguageListView: View {
-    var vm: HomeVM
+    var languageArray: [Language]
     var size: Size
     
     var body: some View {
@@ -22,7 +22,7 @@ struct LanguageListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.languageArray) { resumeItem in
+                    ForEach(languageArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -46,13 +46,15 @@ struct LanguageListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-          //  .background(LinearGradient.blackOpacityGradient)
+            //  .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
 
 struct LanguageListView_Previews: PreviewProvider {
     static var previews: some View {
-        LanguageListView(vm: HomeVM(), size: .large)
+        if let languageArray = davidMalicke.languages {
+            LanguageListView(languageArray: languageArray, size: .large)
+        }
     }
 }

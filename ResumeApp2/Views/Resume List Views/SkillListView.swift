@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SkillListView: View {
-    var vm: HomeVM
+    var skillArray: [Skill]
     var size: Size
     
     
@@ -23,7 +23,7 @@ struct SkillListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.skillArray) { resumeItem in
+                    ForEach(skillArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -47,13 +47,15 @@ struct SkillListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-          //  .background(LinearGradient.blackOpacityGradient)
+            //  .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
 
 struct SkillListView_Previews: PreviewProvider {
     static var previews: some View {
-        SkillListView(vm: HomeVM(), size: .small)
+        if let skillArray = davidMalicke.skills {
+            SkillListView(skillArray: skillArray, size: .small)
+        }
     }
 }

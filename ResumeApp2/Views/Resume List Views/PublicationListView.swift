@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PublicationListView: View {
-    var vm: HomeVM
+    var publicationArray: [Publication]
     var size: Size
     
     var body: some View {
@@ -22,7 +22,7 @@ struct PublicationListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.publicationArray) { resumeItem in
+                    ForEach(publicationArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -46,13 +46,15 @@ struct PublicationListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-         //   .background(LinearGradient.blackOpacityGradient)
+            //   .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
 
 struct PublicationListView_Previews: PreviewProvider {
     static var previews: some View {
-        PublicationListView(vm: HomeVM(), size: .small)
+        if let publicationArray = davidMalicke.publications {
+            PublicationListView(publicationArray: publicationArray, size: .small)
+        }
     }
 }

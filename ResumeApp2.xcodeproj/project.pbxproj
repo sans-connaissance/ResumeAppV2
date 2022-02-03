@@ -44,12 +44,6 @@
 		414EC0DD27A38C4300C1C25F /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0D927A38C4300C1C25F /* WhiteButton.swift */; };
 		414EC0DE27A38C4300C1C25F /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0D927A38C4300C1C25F /* WhiteButton.swift */; };
 		414EC0DF27A38C4300C1C25F /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0D927A38C4300C1C25F /* WhiteButton.swift */; };
-		4157B6B727AB44B200327674 /* ListContainerView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B6B627AB44B200327674 /* ListContainerView2.swift */; };
-		4157B6B827AB44B200327674 /* ListContainerView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B6B627AB44B200327674 /* ListContainerView2.swift */; };
-		4157B6B927AB44B200327674 /* ListContainerView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B6B627AB44B200327674 /* ListContainerView2.swift */; };
-		4157B6BB27AB45C000327674 /* WorkListView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B6BA27AB45C000327674 /* WorkListView2.swift */; };
-		4157B6BC27AB45C000327674 /* WorkListView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B6BA27AB45C000327674 /* WorkListView2.swift */; };
-		4157B6BD27AB45C000327674 /* WorkListView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B6BA27AB45C000327674 /* WorkListView2.swift */; };
 		4183804027A5FCDA00CCC136 /* EducationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4183803F27A5FCDA00CCC136 /* EducationListView.swift */; };
 		4183804127A5FCDA00CCC136 /* EducationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4183803F27A5FCDA00CCC136 /* EducationListView.swift */; };
 		4183804227A5FCDA00CCC136 /* EducationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4183803F27A5FCDA00CCC136 /* EducationListView.swift */; };
@@ -136,8 +130,6 @@
 		414EC0D327A3894800C1C25F /* LargeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTopView.swift; sourceTree = "<group>"; };
 		414EC0D827A38C4300C1C25F /* SmallVerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		414EC0D927A38C4300C1C25F /* WhiteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
-		4157B6B627AB44B200327674 /* ListContainerView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContainerView2.swift; sourceTree = "<group>"; };
-		4157B6BA27AB45C000327674 /* WorkListView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListView2.swift; sourceTree = "<group>"; };
 		4183803F27A5FCDA00CCC136 /* EducationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationListView.swift; sourceTree = "<group>"; };
 		4183804327A5FE1800CCC136 /* ListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContainerView.swift; sourceTree = "<group>"; };
 		4183804727A6C92400CCC136 /* WorkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListView.swift; sourceTree = "<group>"; };
@@ -315,8 +307,6 @@
 				4183806B27A6E39300CCC136 /* ReferenceListView.swift */,
 				4183806F27A6E3E000CCC136 /* ProjectListView.swift */,
 				4183807327A6E4C400CCC136 /* VideoListView.swift */,
-				4157B6B627AB44B200327674 /* ListContainerView2.swift */,
-				4157B6BA27AB45C000327674 /* WorkListView2.swift */,
 			);
 			path = "Resume List Views";
 			sourceTree = "<group>";
@@ -466,7 +456,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4183806C27A6E39300CCC136 /* ReferenceListView.swift in Sources */,
-				4157B6B727AB44B200327674 /* ListContainerView2.swift in Sources */,
 				4183805427A6E0E600CCC136 /* CertificateListView.swift in Sources */,
 				4125DD8E27A0F4D700DA70EB /* Persistence.swift in Sources */,
 				4125DDB527A0F70C00DA70EB /* Resume.swift in Sources */,
@@ -487,7 +476,6 @@
 				414EC0D427A3894800C1C25F /* LargeTopView.swift in Sources */,
 				4183807427A6E4C400CCC136 /* VideoListView.swift in Sources */,
 				41D4B8EB27AA26C5005C4D4F /* EducationDetailVM.swift in Sources */,
-				4157B6BB27AB45C000327674 /* WorkListView2.swift in Sources */,
 				4125DDBA27A0F84B00DA70EB /* ResumeStore.swift in Sources */,
 				4183806027A6E24E00CCC136 /* SkillListView.swift in Sources */,
 				4183806427A6E2F100CCC136 /* LanguageListView.swift in Sources */,
@@ -511,11 +499,9 @@
 				4125DDC727A37D5500DA70EB /* GlobalHelpers.swift in Sources */,
 				4183804527A5FE1800CCC136 /* ListContainerView.swift in Sources */,
 				41D4B8EC27AA26C5005C4D4F /* EducationDetailVM.swift in Sources */,
-				4157B6B827AB44B200327674 /* ListContainerView2.swift in Sources */,
 				4183804D27A6CC1500CCC136 /* VolunteerListView.swift in Sources */,
 				4183807527A6E4C400CCC136 /* VideoListView.swift in Sources */,
 				414EC0CD27A37F5C00C1C25F /* HomeVM.swift in Sources */,
-				4157B6BC27AB45C000327674 /* WorkListView2.swift in Sources */,
 				4125DDC027A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
 				4183805927A6E11F00CCC136 /* PublicationListView.swift in Sources */,
 				4183806D27A6E39300CCC136 /* ReferenceListView.swift in Sources */,
@@ -549,12 +535,10 @@
 				4183805627A6E0E600CCC136 /* CertificateListView.swift in Sources */,
 				4183804627A5FE1800CCC136 /* ListContainerView.swift in Sources */,
 				4183806E27A6E39300CCC136 /* ReferenceListView.swift in Sources */,
-				4157B6B927AB44B200327674 /* ListContainerView2.swift in Sources */,
 				4125DDC127A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
 				4183804E27A6CC1500CCC136 /* VolunteerListView.swift in Sources */,
 				4125DDA727A0F4D700DA70EB /* ResumeApp2UITestsLaunchTests.swift in Sources */,
 				4183806627A6E2F100CCC136 /* LanguageListView.swift in Sources */,
-				4157B6BD27AB45C000327674 /* WorkListView2.swift in Sources */,
 				414EC0D227A3810B00C1C25F /* HomeView.swift in Sources */,
 				4183804A27A6C92400CCC136 /* WorkListView.swift in Sources */,
 				414EC0D627A3894800C1C25F /* LargeTopView.swift in Sources */,

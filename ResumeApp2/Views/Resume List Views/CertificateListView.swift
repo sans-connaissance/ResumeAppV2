@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CertificateListView: View {
-    var vm: HomeVM
+    var certificateArray: [Certificate]
     var size: Size
     
     var body: some View {
@@ -22,7 +22,7 @@ struct CertificateListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.certificateArray) { resumeItem in
+                    ForEach(certificateArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -46,13 +46,15 @@ struct CertificateListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-          //  .background(LinearGradient.blackOpacityGradient)
+            //  .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
 
 struct CertificateListView_Previews: PreviewProvider {
     static var previews: some View {
-        CertificateListView(vm: HomeVM(), size: .small)
+        if let certificateArray = davidMalicke.certificates {
+            CertificateListView(certificateArray: certificateArray, size: .small)
+        }
     }
 }

@@ -8,54 +8,89 @@
 import SwiftUI
 
 struct ListContainerView: View {
-    var vm: HomeVM
+    var array: [Any]
     var category: Category
     var size: Size
-    
+
     // MAYBE HAVE TO USE ANY HERE. then USE @VIEWBUILDER TO BUILD FROM A GENERIC VIEW BASED ON WHAT WAS PASSED INTO ANY.
     var body: some View {
         if category == .work {
-            WorkListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let workArray = array as? [Work] {
+                WorkListView(workArray: workArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .volunteer {
-            VolunteerListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let volunteerArray = array as? [Volunteer] {
+                VolunteerListView(volunteerArray: volunteerArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .education {
-            EducationListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let educationArray = array as? [Education] {
+                EducationListView(educationArray: educationArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .award {
-            AwardListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let awardArray = array as? [Award] {
+                AwardListView(awardArray: awardArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .certificate {
-            CertificateListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let certificateArray = array as? [Certificate] {
+                CertificateListView(certificateArray: certificateArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .publication {
-            PublicationListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let publicationArray = array as? [Publication] {
+                PublicationListView(publicationArray: publicationArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .skill {
-            SkillListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let skillArray = array as? [Skill] {
+                SkillListView(skillArray: skillArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .language {
-            LanguageListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let languageArray = array as? [Language] {
+                LanguageListView(languageArray: languageArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .interest {
-            InterestListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let interestArray = array as? [Interest] {
+                InterestListView(interestArray: interestArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .reference {
-            ReferenceListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let referenceArray = array as? [Reference] {
+                ReferenceListView(referenceArray: referenceArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .project {
-            ProjectListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let projectArray = array as? [Project] {
+                ProjectListView(projectArray: projectArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
+            
         } else if category == .video {
-            VideoListView(vm: vm, size: size)
-                .background(LinearGradient.blackOpacityGradient)
+            if let videoArray = array as? [Video] {
+                VideoListView(videoArray: videoArray, size: size)
+                    .background(LinearGradient.blackOpacityGradient)
+            }
         }
     }
 }
 
-//struct ListContainerView_Previews: PreviewProvider {
+// struct ListContainerView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ListContainerView()
 //    }
-//}
+// }

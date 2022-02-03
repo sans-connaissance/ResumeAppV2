@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ReferenceListView: View {
-    var vm: HomeVM
+    var referenceArray: [Reference]
     var size: Size
     
     var body: some View {
@@ -22,7 +22,7 @@ struct ReferenceListView: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
-                    ForEach(vm.referenceArray) { resumeItem in
+                    ForEach(referenceArray) { resumeItem in
                         NavigationLink {
                             //ResumeItemDetailView(resumeItem: resumeItem)
                         } label: {
@@ -46,13 +46,15 @@ struct ReferenceListView: View {
             }
             ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
-          //  .background(LinearGradient.blackOpacityGradient)
+            //  .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
 
 struct ReferenceListView_Previews: PreviewProvider {
     static var previews: some View {
-        ReferenceListView(vm: HomeVM(), size: .medium)
+        if let referenceArray = davidMalicke.references {
+            ReferenceListView(referenceArray: referenceArray, size: .medium)
+        }
     }
 }
