@@ -36,13 +36,13 @@ struct EducationDetailView: View {
             ScrollView(showsIndicators: false) {
                 LazyVStack {
                     ListContainerView(array: vm.educationDetailViewArray, category: .education, size: .medium)
-                        
+                    
                     ListContainerView(array: vm.educationDetailViewProjects, category: .project, size: .small)
                 }
             }
-
+            
         }
-      //  .navigationBarHidden(true)
+        //  .navigationBarHidden(true)
         .onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
     }
 }
@@ -170,6 +170,8 @@ struct EducationAreaView: View {
 
 struct EducationDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        EducationDetailView(resumeItem: masterDegree)
+        NavigationView {
+            EducationDetailView(resumeItem: masterDegree)
+        }
     }
 }

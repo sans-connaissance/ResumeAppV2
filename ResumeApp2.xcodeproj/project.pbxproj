@@ -44,6 +44,12 @@
 		414EC0DD27A38C4300C1C25F /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0D927A38C4300C1C25F /* WhiteButton.swift */; };
 		414EC0DE27A38C4300C1C25F /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0D927A38C4300C1C25F /* WhiteButton.swift */; };
 		414EC0DF27A38C4300C1C25F /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0D927A38C4300C1C25F /* WhiteButton.swift */; };
+		4157B6FD27AD73C600327674 /* FeaturedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B6FC27AD73C600327674 /* FeaturedListView.swift */; };
+		4157B6FE27AD73C600327674 /* FeaturedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B6FC27AD73C600327674 /* FeaturedListView.swift */; };
+		4157B6FF27AD73C600327674 /* FeaturedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B6FC27AD73C600327674 /* FeaturedListView.swift */; };
+		4157B70127AD73DE00327674 /* FeaturedListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B70027AD73DE00327674 /* FeaturedListVM.swift */; };
+		4157B70227AD73DE00327674 /* FeaturedListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B70027AD73DE00327674 /* FeaturedListVM.swift */; };
+		4157B70327AD73DE00327674 /* FeaturedListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157B70027AD73DE00327674 /* FeaturedListVM.swift */; };
 		4183804027A5FCDA00CCC136 /* EducationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4183803F27A5FCDA00CCC136 /* EducationListView.swift */; };
 		4183804127A5FCDA00CCC136 /* EducationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4183803F27A5FCDA00CCC136 /* EducationListView.swift */; };
 		4183804227A5FCDA00CCC136 /* EducationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4183803F27A5FCDA00CCC136 /* EducationListView.swift */; };
@@ -130,6 +136,8 @@
 		414EC0D327A3894800C1C25F /* LargeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTopView.swift; sourceTree = "<group>"; };
 		414EC0D827A38C4300C1C25F /* SmallVerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		414EC0D927A38C4300C1C25F /* WhiteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
+		4157B6FC27AD73C600327674 /* FeaturedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedListView.swift; sourceTree = "<group>"; };
+		4157B70027AD73DE00327674 /* FeaturedListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedListVM.swift; sourceTree = "<group>"; };
 		4183803F27A5FCDA00CCC136 /* EducationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationListView.swift; sourceTree = "<group>"; };
 		4183804327A5FE1800CCC136 /* ListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContainerView.swift; sourceTree = "<group>"; };
 		4183804727A6C92400CCC136 /* WorkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListView.swift; sourceTree = "<group>"; };
@@ -255,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				414EC0E027A589B900C1C25F /* Main Views */,
+				4157B6FB27AD739700327674 /* Featured Views */,
 				414EC0D727A38BAC00C1C25F /* Buttons */,
 				414EC0E127A58A5500C1C25F /* Resume List Views */,
 				4183807727A7061400CCC136 /* Detail Views */,
@@ -267,6 +276,7 @@
 			children = (
 				414EC0CB27A37F5C00C1C25F /* HomeVM.swift */,
 				41D4B8EA27AA26C5005C4D4F /* EducationDetailVM.swift */,
+				4157B70027AD73DE00327674 /* FeaturedListVM.swift */,
 			);
 			path = "VIew Models";
 			sourceTree = "<group>";
@@ -309,6 +319,14 @@
 				4183807327A6E4C400CCC136 /* VideoListView.swift */,
 			);
 			path = "Resume List Views";
+			sourceTree = "<group>";
+		};
+		4157B6FB27AD739700327674 /* Featured Views */ = {
+			isa = PBXGroup;
+			children = (
+				4157B6FC27AD73C600327674 /* FeaturedListView.swift */,
+			);
+			path = "Featured Views";
 			sourceTree = "<group>";
 		};
 		4183807727A7061400CCC136 /* Detail Views */ = {
@@ -463,6 +481,7 @@
 				414EC0D027A3810B00C1C25F /* HomeView.swift in Sources */,
 				4183807027A6E3E000CCC136 /* ProjectListView.swift in Sources */,
 				4183804C27A6CC1500CCC136 /* VolunteerListView.swift in Sources */,
+				4157B70127AD73DE00327674 /* FeaturedListVM.swift in Sources */,
 				414EC0CC27A37F5C00C1C25F /* HomeVM.swift in Sources */,
 				414EC0DD27A38C4300C1C25F /* WhiteButton.swift in Sources */,
 				4125DDBF27A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
@@ -475,6 +494,7 @@
 				4183804027A5FCDA00CCC136 /* EducationListView.swift in Sources */,
 				414EC0D427A3894800C1C25F /* LargeTopView.swift in Sources */,
 				4183807427A6E4C400CCC136 /* VideoListView.swift in Sources */,
+				4157B6FD27AD73C600327674 /* FeaturedListView.swift in Sources */,
 				41D4B8EB27AA26C5005C4D4F /* EducationDetailVM.swift in Sources */,
 				4125DDBA27A0F84B00DA70EB /* ResumeStore.swift in Sources */,
 				4183806027A6E24E00CCC136 /* SkillListView.swift in Sources */,
@@ -492,6 +512,7 @@
 			files = (
 				4183804127A5FCDA00CCC136 /* EducationListView.swift in Sources */,
 				4125DDB627A0F70C00DA70EB /* Resume.swift in Sources */,
+				4157B70227AD73DE00327674 /* FeaturedListVM.swift in Sources */,
 				414EC0D127A3810B00C1C25F /* HomeView.swift in Sources */,
 				4125DDBB27A0F84B00DA70EB /* ResumeStore.swift in Sources */,
 				4183804927A6C92400CCC136 /* WorkListView.swift in Sources */,
@@ -502,6 +523,7 @@
 				4183804D27A6CC1500CCC136 /* VolunteerListView.swift in Sources */,
 				4183807527A6E4C400CCC136 /* VideoListView.swift in Sources */,
 				414EC0CD27A37F5C00C1C25F /* HomeVM.swift in Sources */,
+				4157B6FE27AD73C600327674 /* FeaturedListView.swift in Sources */,
 				4125DDC027A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
 				4183805927A6E11F00CCC136 /* PublicationListView.swift in Sources */,
 				4183806D27A6E39300CCC136 /* ReferenceListView.swift in Sources */,
@@ -526,6 +548,7 @@
 				4183805A27A6E11F00CCC136 /* PublicationListView.swift in Sources */,
 				4183804227A5FCDA00CCC136 /* EducationListView.swift in Sources */,
 				4183806A27A6E35100CCC136 /* InterestListView.swift in Sources */,
+				4157B6FF27AD73C600327674 /* FeaturedListView.swift in Sources */,
 				4125DDB727A0F70C00DA70EB /* Resume.swift in Sources */,
 				4183807227A6E3E000CCC136 /* ProjectListView.swift in Sources */,
 				414EC0DF27A38C4300C1C25F /* WhiteButton.swift in Sources */,
@@ -535,6 +558,7 @@
 				4183805627A6E0E600CCC136 /* CertificateListView.swift in Sources */,
 				4183804627A5FE1800CCC136 /* ListContainerView.swift in Sources */,
 				4183806E27A6E39300CCC136 /* ReferenceListView.swift in Sources */,
+				4157B70327AD73DE00327674 /* FeaturedListVM.swift in Sources */,
 				4125DDC127A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
 				4183804E27A6CC1500CCC136 /* VolunteerListView.swift in Sources */,
 				4125DDA727A0F4D700DA70EB /* ResumeApp2UITestsLaunchTests.swift in Sources */,
