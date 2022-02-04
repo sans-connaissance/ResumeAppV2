@@ -23,16 +23,24 @@ class HomeVM: ObservableObject {
     @Published var projectArray: [Project] = []
     @Published var videoArray: [Video] = []
     
-    static var resume: Resume {
-        return davidMalicke
-    }
+
     //How does this work in the real app?
     //OR is it that you initialize a blank type?
     //Probably have to unwrap an array.
-    @Published var basics = davidMalicke.basics!
-        
+    @Published var skillTest: Skill = davidMalicke.skills![0]
+    @Published var basics: Basics = davidMalicke.basics!
+    
+//    init() {
+//        basics
+//    }
+//
     //is this were future calls will go to pull from server?
+    
     func setupResumeArrays(resume: Resume) {
+        
+        if let basics = resume.basics {
+            self.basics = basics
+        }
         
         if let educationItems: [Education] = resume.education {
             for item in educationItems {

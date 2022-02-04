@@ -9,21 +9,30 @@ import SwiftUI
 
 struct FeaturedListView: View {
     @StateObject private var vm = FeaturedListVM()
+    @State private var showModalView = false
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             List {
-                
                 ForEach(vm.resumeArray, id: \.self) { resume in
-                    NavigationLink {
-                        Text("Hi")
-                    } label: {
-                        Text(resume.basics!.name!)
-                    }
-
-                    
+                    if let name = resume.basics?.name {
+                        Button {
+                            showModalView = true
+                        } label: {
+                            Text(name)
+                        }.fullScreenCover(isPresented: $showModalView) {
+                            HomeView(resume: resume)
+                        }
+                    //                    NavigationLink {
+                    //                        HomeView(resume: resume)
+                    //                    } label: {
+                    //                        if let name = resume.basics?.name {
+                    //                        Text(name)
+                    //                        }
+                    //                    }
                 }
-     
+//                }
+//
             }
         }
     }

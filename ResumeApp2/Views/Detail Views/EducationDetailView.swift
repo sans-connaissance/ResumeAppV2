@@ -35,7 +35,7 @@ struct EducationDetailView: View {
             //THESE NEED TO BE MADE CONDITIONAL IN CASE THEY DONT EXIST
             ScrollView(showsIndicators: false) {
                 LazyVStack {
-                    ListContainerView(array: vm.educationDetailViewArray, category: .education, size: .medium)
+//                    ListContainerView(array: vm.educationDetailViewArray, category: .education, size: .medium)
                     
                     ListContainerView(array: vm.educationDetailViewProjects, category: .project, size: .small)
                 }
