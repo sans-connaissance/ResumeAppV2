@@ -11,6 +11,17 @@ import SwiftUI
 class FeaturedListVM: ObservableObject {
     
     
+    @Published var resumeArray: [Resume] = resumeStore
+
     
+    func getResumes() {
+        
+//        var resumes: [Resume] = resumeStore {
+//            for item in resumes {
+//                resumeArray.append(item)
+//            }
+//        }
+        
+    }
     
 }

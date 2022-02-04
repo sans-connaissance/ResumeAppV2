@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Resume: Identifiable {
+struct Resume: Identifiable, Hashable {
+//    static func == (lhs: Resume, rhs: Resume) -> Bool {
+//        return lhs.id == rhs.id
+//    }
+    
     var id: String
     var basics: Basics?
     var work: [Work]?
@@ -23,7 +27,7 @@ struct Resume: Identifiable {
     var projects: [Project]?
 }
 
-struct Basics: Identifiable {
+struct Basics: Identifiable, Hashable {
     var id: String
     var name: String?
     var label: String?
@@ -37,7 +41,7 @@ struct Basics: Identifiable {
     var video: Video?
 }
 
-struct Location: Identifiable {
+struct Location: Identifiable, Hashable {
     var id: String
     var address: String?
     var postalCode: String?
@@ -46,7 +50,7 @@ struct Location: Identifiable {
     var region: String?
 }
 
-struct Profile: Identifiable {
+struct Profile: Identifiable, Hashable {
     var id: String
     var network: String?
     var username: String?
@@ -54,7 +58,7 @@ struct Profile: Identifiable {
     var thumbnail: String?
 }
 
-struct Work: Identifiable {
+struct Work: Identifiable, Hashable {
     var id: String
     var name: String?
     var department: String?
@@ -67,7 +71,7 @@ struct Work: Identifiable {
     var thumbnail: String?
 }
 
-struct Volunteer: Identifiable {
+struct Volunteer: Identifiable, Hashable {
     var id: String
     var organization: String?
     var position: String?
@@ -79,7 +83,7 @@ struct Volunteer: Identifiable {
     var thumbnail: String?
 }
 
-struct Education: Identifiable {
+struct Education: Identifiable, Hashable {
     var id: String
     var institution: String?
     var studyType: String?
@@ -95,7 +99,7 @@ struct Education: Identifiable {
     var thumbnail: String?
 }
 
-struct Award: Identifiable {
+struct Award: Identifiable, Hashable {
     var id: String
     var title: String?
     var date: String?
@@ -104,7 +108,7 @@ struct Award: Identifiable {
     var thumbnail: String?
 }
 
-struct Certificate: Identifiable {
+struct Certificate: Identifiable, Hashable {
     var id: String
     var name: String?
     var date: String?
@@ -113,7 +117,7 @@ struct Certificate: Identifiable {
     var thumbnail: String?
 }
 
-struct Publication: Identifiable {
+struct Publication: Identifiable, Hashable {
     var id: String
     var name: String?
     var publisher: String?
@@ -123,7 +127,7 @@ struct Publication: Identifiable {
     var thumbnail: String?
 }
 
-struct Skill: Identifiable {
+struct Skill: Identifiable, Hashable {
     var id: String
     var name: String?
     var level: String?
@@ -131,28 +135,28 @@ struct Skill: Identifiable {
     var keywords: [String]?
 }
 
-struct Language: Identifiable {
+struct Language: Identifiable, Hashable {
     var id: String
     var language: String?
     var fluency: String?
     var thumbnail: String?
 }
 
-struct Interest: Identifiable {
+struct Interest: Identifiable, Hashable {
     var id: String
     var name: String?
     var keywords: [String]?
     var thumbnail: String?
 }
 
-struct Reference: Identifiable {
+struct Reference: Identifiable, Hashable {
     var id: String
     var name: String?
     var reference: String?
     var thumbnail: String?
 }
 
-struct Project: Identifiable {
+struct Project: Identifiable, Hashable {
     var id: String
     var name: String?
     var description: String?
@@ -169,7 +173,7 @@ struct Project: Identifiable {
     var videos: [Video]?
 }
 
-struct Video: Identifiable {
+struct Video: Identifiable, Hashable {
     var id: String
     var name: String?
     var videoURL: String?

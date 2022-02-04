@@ -13,7 +13,7 @@ struct ResumeApp2App: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            FeaturedListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

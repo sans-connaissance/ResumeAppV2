@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct FeaturedListView: View {
+    @StateObject private var vm = FeaturedListVM()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                
+                ForEach(vm.resumeArray, id: \.self) { resume in
+                    NavigationLink {
+                        Text("Hi")
+                    } label: {
+                        Text(resume.basics!.name!)
+                    }
+
+                    
+                }
+     
+            }
+        }
     }
 }
 

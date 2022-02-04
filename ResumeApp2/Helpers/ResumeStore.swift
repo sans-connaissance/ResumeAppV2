@@ -7,6 +7,8 @@
 
 import Foundation
 
+let resumeStore: [Resume] = [davidMalicke]
+
 let davidMalicke = Resume(
     id: UUID().uuidString,
     basics: basics,

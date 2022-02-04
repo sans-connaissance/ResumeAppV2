@@ -23,11 +23,6 @@ class HomeVM: ObservableObject {
     @Published var projectArray: [Project] = []
     @Published var videoArray: [Video] = []
     
-    init() {
-        setupResumeArrays()
-        
-    }
-    
     static var resume: Resume {
         return davidMalicke
     }
@@ -37,32 +32,32 @@ class HomeVM: ObservableObject {
     @Published var basics = davidMalicke.basics!
         
     //is this were future calls will go to pull from server?
-    func setupResumeArrays() {
+    func setupResumeArrays(resume: Resume) {
         
-        if let educationItems: [Education] = davidMalicke.education {
+        if let educationItems: [Education] = resume.education {
             for item in educationItems {
                 if item.educationType == "formal" {
                 educationArray.append(item)
                 }
             }
         }
-        if let workItems: [Work] = davidMalicke.work {
+        if let workItems: [Work] = resume.work {
             for item in workItems {
                 experienceArray.append(item)
             }
         }
-        if let projectItems: [Project] = davidMalicke.projects {
+        if let projectItems: [Project] = resume.projects {
             for item in projectItems {
                 projectArray.append(item)
             }
         }
-        if let certificateItem: [Certificate] = davidMalicke.certificates {
+        if let certificateItem: [Certificate] = resume.certificates {
             for item in certificateItem {
                 certificateArray.append(item)
             }
         }
         //Can this be done differently so that in the view we're not adding [0] to end of variable call.
-        if let skillItems: [Skill] = davidMalicke.skills {
+        if let skillItems: [Skill] = resume.skills {
             for item in skillItems {
                 skillArray.append(item)
             }
