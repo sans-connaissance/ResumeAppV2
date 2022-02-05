@@ -10,6 +10,7 @@ import SwiftUI
 struct EducationListView: View {
     var educationArray: [Education]
     var size: Size
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -24,7 +25,7 @@ struct EducationListView: View {
                 LazyHStack(spacing: -6) {
                     ForEach(educationArray) { resumeItem in
                         NavigationLink {
-                            EducationDetailView(resumeItem: resumeItem)
+                            EducationDetailView(resumeItem: resumeItem, isPresented: $isPresented)
                         } label: {
                             VStack {
                                 if let imageString = resumeItem.thumbnail {
@@ -51,10 +52,10 @@ struct EducationListView: View {
     }
 }
 
-struct EducationListView_Previews: PreviewProvider {
-    static var previews: some View {
-        if let educationArray = davidMalicke.education {
-            EducationListView(educationArray: educationArray, size: .small)
-        }
-    }
-}
+//struct EducationListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        if let educationArray = davidMalicke.education {
+//            EducationListView(educationArray: educationArray, size: .small)
+//        }
+//    }
+//}

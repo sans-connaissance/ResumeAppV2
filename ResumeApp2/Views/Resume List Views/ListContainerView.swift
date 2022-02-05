@@ -11,6 +11,7 @@ struct ListContainerView: View {
     var array: [Any]
     var category: Category
     var size: Size
+    @Binding var isPresented: Bool
 
     // MAYBE HAVE TO USE ANY HERE. then USE @VIEWBUILDER TO BUILD FROM A GENERIC VIEW BASED ON WHAT WAS PASSED INTO ANY.
     var body: some View {
@@ -28,7 +29,7 @@ struct ListContainerView: View {
             
         } else if category == .education {
             if let educationArray = array as? [Education] {
-                EducationListView(educationArray: educationArray, size: size)
+                EducationListView(educationArray: educationArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             

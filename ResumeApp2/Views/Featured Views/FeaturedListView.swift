@@ -21,7 +21,7 @@ struct FeaturedListView: View {
                         } label: {
                             Text(name)
                         }.fullScreenCover(isPresented: $showModalView) {
-                            HomeView(resume: resume)
+                            HomeView(resume: resume, isPresented: $showModalView)
                         }
                     //                    NavigationLink {
                     //                        HomeView(resume: resume)

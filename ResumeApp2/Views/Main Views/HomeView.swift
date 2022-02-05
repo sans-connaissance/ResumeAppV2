@@ -10,9 +10,9 @@ import Kingfisher
 
 struct HomeView: View {
     @StateObject private var vm = HomeVM()
-    @Environment(\.presentationMode) var presentationMode
     var resume: Resume
     let screen = UIScreen.main.bounds
+    @Binding var isPresented: Bool
     
     var body: some View {
         NavigationView {
@@ -24,14 +24,14 @@ struct HomeView: View {
                         LargeTopView(skill: vm.skillTest, basics: vm.basics)
                             .frame(width: screen.width)
                             .padding(.top, -110)
-                        ListContainerView(array: vm.educationArray, category: .education, size: .medium)
+                        ListContainerView(array: vm.educationArray, category: .education, size: .medium, isPresented: $isPresented)
                     }
                 }
             }
             .onAppear(perform: {vm.setupResumeArrays(resume: resume)})
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing: Button {
-                presentationMode.wrappedValue.dismiss()
+            .navigationBarItems(leading: Button {
+                isPresented = false
             } label: {
                 Image(systemName: "x.circle.fill")
                     .font(.title2)
@@ -43,6 +43,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(resume: davidMalicke)
+        HomeView(resume: davidMalicke, isPresented: .constant(true))
     }
 }

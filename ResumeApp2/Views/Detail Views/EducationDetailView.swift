@@ -10,7 +10,9 @@ import SwiftUI
 
 struct EducationDetailView: View {
     @StateObject private var vm = EducationDetailVM()
+    //@Environment(\.presentationMode) var presentationMode
     var resumeItem: Education
+    @Binding var isPresented: Bool
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -37,13 +39,21 @@ struct EducationDetailView: View {
                 LazyVStack {
 //                    ListContainerView(array: vm.educationDetailViewArray, category: .education, size: .medium)
                     
-                    ListContainerView(array: vm.educationDetailViewProjects, category: .project, size: .small)
+                    ListContainerView(array: vm.educationDetailViewProjects, category: .project, size: .small, isPresented: $isPresented)
+                    
                 }
             }
             
         }
         //  .navigationBarHidden(true)
         .onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(trailing: Button {
+            isPresented = false
+        } label: {
+            Image(systemName: "x.circle.fill")
+                .font(.title2)
+        })
     }
 }
 
@@ -171,7 +181,7 @@ struct EducationAreaView: View {
 struct EducationDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            EducationDetailView(resumeItem: masterDegree)
+            EducationDetailView(resumeItem: masterDegree, isPresented: .constant(true))
         }
     }
 }
