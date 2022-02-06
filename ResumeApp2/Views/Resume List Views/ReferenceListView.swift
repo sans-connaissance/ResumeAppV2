@@ -10,6 +10,7 @@ import SwiftUI
 struct ReferenceListView: View {
     var referenceArray: [Reference]
     var size: Size
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -54,7 +55,7 @@ struct ReferenceListView: View {
 struct ReferenceListView_Previews: PreviewProvider {
     static var previews: some View {
         if let referenceArray = davidMalicke.references {
-            ReferenceListView(referenceArray: referenceArray, size: .medium)
+            ReferenceListView(referenceArray: referenceArray, size: .medium, isPresented: .constant(true))
         }
     }
 }

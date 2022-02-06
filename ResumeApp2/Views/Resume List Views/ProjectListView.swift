@@ -10,6 +10,7 @@ import SwiftUI
 struct ProjectListView: View {
     var projectArray: [Project]
     var size: Size
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -54,7 +55,7 @@ struct ProjectListView: View {
 struct ProjectListView_Previews: PreviewProvider {
     static var previews: some View {
         if let projectArray = davidMalicke.projects {
-            ProjectListView(projectArray: projectArray, size: .small)
+            ProjectListView(projectArray: projectArray, size: .small, isPresented: .constant(true))
         }
     }
 }

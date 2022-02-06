@@ -10,6 +10,7 @@ import SwiftUI
 struct PublicationListView: View {
     var publicationArray: [Publication]
     var size: Size
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -54,7 +55,7 @@ struct PublicationListView: View {
 struct PublicationListView_Previews: PreviewProvider {
     static var previews: some View {
         if let publicationArray = davidMalicke.publications {
-            PublicationListView(publicationArray: publicationArray, size: .small)
+            PublicationListView(publicationArray: publicationArray, size: .small, isPresented: .constant(true))
         }
     }
 }

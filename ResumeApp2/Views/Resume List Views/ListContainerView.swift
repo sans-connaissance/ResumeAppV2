@@ -17,13 +17,13 @@ struct ListContainerView: View {
     var body: some View {
         if category == .work {
             if let workArray = array as? [Work] {
-                WorkListView(workArray: workArray, size: size)
+                WorkListView(workArray: workArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             
         } else if category == .volunteer {
             if let volunteerArray = array as? [Volunteer] {
-                VolunteerListView(volunteerArray: volunteerArray, size: size)
+                VolunteerListView(volunteerArray: volunteerArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             
@@ -35,55 +35,55 @@ struct ListContainerView: View {
             
         } else if category == .award {
             if let awardArray = array as? [Award] {
-                AwardListView(awardArray: awardArray, size: size)
+                AwardListView(awardArray: awardArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             
         } else if category == .certificate {
             if let certificateArray = array as? [Certificate] {
-                CertificateListView(certificateArray: certificateArray, size: size)
+                CertificateListView(certificateArray: certificateArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             
         } else if category == .publication {
             if let publicationArray = array as? [Publication] {
-                PublicationListView(publicationArray: publicationArray, size: size)
+                PublicationListView(publicationArray: publicationArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             
         } else if category == .skill {
             if let skillArray = array as? [Skill] {
-                SkillListView(skillArray: skillArray, size: size)
+                SkillListView(skillArray: skillArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             
         } else if category == .language {
             if let languageArray = array as? [Language] {
-                LanguageListView(languageArray: languageArray, size: size)
+                LanguageListView(languageArray: languageArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             
         } else if category == .interest {
             if let interestArray = array as? [Interest] {
-                InterestListView(interestArray: interestArray, size: size)
+                InterestListView(interestArray: interestArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             
         } else if category == .reference {
             if let referenceArray = array as? [Reference] {
-                ReferenceListView(referenceArray: referenceArray, size: size)
+                ReferenceListView(referenceArray: referenceArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             
         } else if category == .project {
             if let projectArray = array as? [Project] {
-                ProjectListView(projectArray: projectArray, size: size)
+                ProjectListView(projectArray: projectArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
             
         } else if category == .video {
             if let videoArray = array as? [Video] {
-                VideoListView(videoArray: videoArray, size: size)
+                VideoListView(videoArray: videoArray, size: size, isPresented: $isPresented)
                     .background(LinearGradient.blackOpacityGradient)
             }
         }

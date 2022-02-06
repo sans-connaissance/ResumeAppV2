@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class HomeVM: ObservableObject {
+class ResumeHomeVM: ObservableObject {
     
     @Published var experienceArray: [Work] = []
     @Published var volunteerArray: [Volunteer] = []

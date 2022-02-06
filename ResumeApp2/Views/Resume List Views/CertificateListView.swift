@@ -10,6 +10,7 @@ import SwiftUI
 struct CertificateListView: View {
     var certificateArray: [Certificate]
     var size: Size
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -54,7 +55,7 @@ struct CertificateListView: View {
 struct CertificateListView_Previews: PreviewProvider {
     static var previews: some View {
         if let certificateArray = davidMalicke.certificates {
-            CertificateListView(certificateArray: certificateArray, size: .small)
+            CertificateListView(certificateArray: certificateArray, size: .small, isPresented: .constant(true))
         }
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct LanguageListView: View {
     var languageArray: [Language]
     var size: Size
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -54,7 +55,7 @@ struct LanguageListView: View {
 struct LanguageListView_Previews: PreviewProvider {
     static var previews: some View {
         if let languageArray = davidMalicke.languages {
-            LanguageListView(languageArray: languageArray, size: .large)
+            LanguageListView(languageArray: languageArray, size: .large, isPresented: .constant(true))
         }
     }
 }

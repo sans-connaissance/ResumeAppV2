@@ -10,6 +10,7 @@ import SwiftUI
 struct VideoListView: View {
     var videoArray: [Video]
     var size: Size
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -53,6 +54,6 @@ struct VideoListView: View {
 
 //struct VideoListView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        VideoListView(videoArray: , size: .small)
+//        VideoListView(videoArray: , size: .small, isPresented: .constant(true))
 //    }
 //}

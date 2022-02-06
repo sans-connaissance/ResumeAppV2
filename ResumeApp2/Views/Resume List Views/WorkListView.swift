@@ -10,6 +10,7 @@ import SwiftUI
 struct WorkListView: View {
     var workArray: [Work]
     var size: Size
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -54,7 +55,7 @@ struct WorkListView: View {
 struct WorkListView_Previews: PreviewProvider {
     static var previews: some View {
         if let workArray = davidMalicke.work {
-            WorkListView(workArray: workArray, size: .small)
+            WorkListView(workArray: workArray, size: .small, isPresented: .constant(true))
         }
     }
 }

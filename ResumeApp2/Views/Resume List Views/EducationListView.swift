@@ -52,10 +52,10 @@ struct EducationListView: View {
     }
 }
 
-//struct EducationListView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        if let educationArray = davidMalicke.education {
-//            EducationListView(educationArray: educationArray, size: .small)
-//        }
-//    }
-//}
+struct EducationListView_Previews: PreviewProvider {
+    static var previews: some View {
+        if let educationArray = davidMalicke.education {
+            EducationListView(educationArray: educationArray, size: .small, isPresented: .constant(true))
+        }
+    }
+}

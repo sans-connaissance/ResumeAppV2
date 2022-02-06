@@ -10,7 +10,7 @@ import SwiftUI
 struct InterestListView: View {
     var interestArray: [Interest]
     var size: Size
-    
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -55,7 +55,7 @@ struct InterestListView: View {
 struct InterestListView_Previews: PreviewProvider {
     static var previews: some View {
         if let interestArray = davidMalicke.interests {
-            InterestListView(interestArray: interestArray, size: .small)
+            InterestListView(interestArray: interestArray, size: .small, isPresented: .constant(true))
         }
     }
 }

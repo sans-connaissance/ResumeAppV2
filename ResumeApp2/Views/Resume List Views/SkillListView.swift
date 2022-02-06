@@ -10,6 +10,7 @@ import SwiftUI
 struct SkillListView: View {
     var skillArray: [Skill]
     var size: Size
+    @Binding var isPresented: Bool
     
     
     var body: some View {
@@ -55,7 +56,7 @@ struct SkillListView: View {
 struct SkillListView_Previews: PreviewProvider {
     static var previews: some View {
         if let skillArray = davidMalicke.skills {
-            SkillListView(skillArray: skillArray, size: .small)
+            SkillListView(skillArray: skillArray, size: .small, isPresented: .constant(true))
         }
     }
 }

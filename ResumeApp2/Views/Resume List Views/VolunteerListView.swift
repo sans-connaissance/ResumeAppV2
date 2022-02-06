@@ -10,6 +10,7 @@ import SwiftUI
 struct VolunteerListView: View {
     var volunteerArray: [Volunteer]
     var size: Size
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -55,7 +56,7 @@ struct VolunteerListView: View {
 struct VolunteerListView_Previews: PreviewProvider {
     static var previews: some View {
         if let volunteerArray = davidMalicke.volunteer {
-            VolunteerListView(volunteerArray: volunteerArray, size: .medium)
+            VolunteerListView(volunteerArray: volunteerArray, size: .medium, isPresented: .constant(true))
         }
     }
 }

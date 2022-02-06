@@ -10,7 +10,7 @@ import SwiftUI
 struct AwardListView: View {
     var awardArray: [Award]
     var size: Size
-    
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack {
@@ -56,7 +56,7 @@ struct AwardListView: View {
 struct AwardListView_Previews: PreviewProvider {
     static var previews: some View {
         if let awardArray = davidMalicke.awards {
-            AwardListView(awardArray: awardArray, size: .large)
+            AwardListView(awardArray: awardArray, size: .large, isPresented: .constant(true))
         }
     }
 }
