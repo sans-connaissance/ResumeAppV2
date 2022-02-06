@@ -12,7 +12,6 @@ struct FeaturedListView: View {
     @State private var showModalView = false
     
     var body: some View {
-//        NavigationView {
             List {
                 ForEach(vm.resumeArray, id: \.self) { resume in
                     if let name = resume.basics?.name {
@@ -23,16 +22,8 @@ struct FeaturedListView: View {
                         }.fullScreenCover(isPresented: $showModalView) {
                             HomeView(resume: resume, isPresented: $showModalView)
                         }
-                    //                    NavigationLink {
-                    //                        HomeView(resume: resume)
-                    //                    } label: {
-                    //                        if let name = resume.basics?.name {
-                    //                        Text(name)
-                    //                        }
-                    //                    }
+
                 }
-//                }
-//
             }
         }
     }
