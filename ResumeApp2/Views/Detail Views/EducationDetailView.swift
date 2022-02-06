@@ -10,7 +10,6 @@ import SwiftUI
 
 struct EducationDetailView: View {
     @StateObject private var vm = EducationDetailVM()
-    //@Environment(\.presentationMode) var presentationMode
     var resumeItem: Education
     @Binding var isPresented: Bool
     
@@ -37,15 +36,12 @@ struct EducationDetailView: View {
             //THESE NEED TO BE MADE CONDITIONAL IN CASE THEY DONT EXIST
             ScrollView(showsIndicators: false) {
                 LazyVStack {
-//                    ListContainerView(array: vm.educationDetailViewArray, category: .education, size: .medium)
-                    
                     ListContainerView(array: vm.educationDetailViewProjects, category: .project, size: .small, isPresented: $isPresented)
                     
                 }
             }
             
         }
-        //  .navigationBarHidden(true)
         .onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing: Button {

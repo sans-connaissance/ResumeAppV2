@@ -20,7 +20,7 @@ struct FeaturedListView: View {
                         } label: {
                             Text(name)
                         }.fullScreenCover(isPresented: $showModalView) {
-                            HomeView(resume: resume, isPresented: $showModalView)
+                            ResumeHomeView(resume: resume, isPresented: $showModalView)
                         }
 
                 }

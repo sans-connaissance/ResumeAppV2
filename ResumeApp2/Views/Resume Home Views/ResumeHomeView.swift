@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct HomeView: View {
+struct ResumeHomeView: View {
     @StateObject private var vm = HomeVM()
     var resume: Resume
     let screen = UIScreen.main.bounds
@@ -43,6 +43,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(resume: davidMalicke, isPresented: .constant(true))
+        ResumeHomeView(resume: davidMalicke, isPresented: .constant(true))
     }
 }
