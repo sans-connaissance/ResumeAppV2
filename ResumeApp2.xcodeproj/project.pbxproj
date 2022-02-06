@@ -10,6 +10,15 @@
 		410E2EF627AF6BD4004A0FA1 /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2EF527AF6BD4004A0FA1 /* SearchListView.swift */; };
 		410E2EF727AF6BD4004A0FA1 /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2EF527AF6BD4004A0FA1 /* SearchListView.swift */; };
 		410E2EF827AF6BD4004A0FA1 /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2EF527AF6BD4004A0FA1 /* SearchListView.swift */; };
+		410E2EFE27B01686004A0FA1 /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2EFD27B01686004A0FA1 /* FeedListView.swift */; };
+		410E2EFF27B01686004A0FA1 /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2EFD27B01686004A0FA1 /* FeedListView.swift */; };
+		410E2F0027B01686004A0FA1 /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2EFD27B01686004A0FA1 /* FeedListView.swift */; };
+		410E2F0227B016AD004A0FA1 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2F0127B016AD004A0FA1 /* MeView.swift */; };
+		410E2F0327B016AD004A0FA1 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2F0127B016AD004A0FA1 /* MeView.swift */; };
+		410E2F0427B016AD004A0FA1 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2F0127B016AD004A0FA1 /* MeView.swift */; };
+		410E2F0627B016C2004A0FA1 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2F0527B016C2004A0FA1 /* StoreView.swift */; };
+		410E2F0727B016C2004A0FA1 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2F0527B016C2004A0FA1 /* StoreView.swift */; };
+		410E2F0827B016C2004A0FA1 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E2F0527B016C2004A0FA1 /* StoreView.swift */; };
 		4125DD8527A0F4D500DA70EB /* ResumeApp2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125DD8427A0F4D500DA70EB /* ResumeApp2App.swift */; };
 		4125DD8727A0F4D500DA70EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125DD8627A0F4D500DA70EB /* ContentView.swift */; };
 		4125DD8927A0F4D700DA70EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4125DD8827A0F4D700DA70EB /* Assets.xcassets */; };
@@ -119,6 +128,9 @@
 
 /* Begin PBXFileReference section */
 		410E2EF527AF6BD4004A0FA1 /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
+		410E2EFD27B01686004A0FA1 /* FeedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListView.swift; sourceTree = "<group>"; };
+		410E2F0127B016AD004A0FA1 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		410E2F0527B016C2004A0FA1 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		4125DD8127A0F4D500DA70EB /* ResumeApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4125DD8427A0F4D500DA70EB /* ResumeApp2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeApp2App.swift; sourceTree = "<group>"; };
 		4125DD8627A0F4D500DA70EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -191,6 +203,40 @@
 				410E2EF527AF6BD4004A0FA1 /* SearchListView.swift */,
 			);
 			path = "Search Views";
+			sourceTree = "<group>";
+		};
+		410E2EF927B0157E004A0FA1 /* Me Views */ = {
+			isa = PBXGroup;
+			children = (
+				410E2F0127B016AD004A0FA1 /* MeView.swift */,
+			);
+			path = "Me Views";
+			sourceTree = "<group>";
+		};
+		410E2EFA27B01599004A0FA1 /* Feed Views */ = {
+			isa = PBXGroup;
+			children = (
+				410E2EFD27B01686004A0FA1 /* FeedListView.swift */,
+			);
+			path = "Feed Views";
+			sourceTree = "<group>";
+		};
+		410E2EFB27B015D2004A0FA1 /* Store Views */ = {
+			isa = PBXGroup;
+			children = (
+				410E2F0527B016C2004A0FA1 /* StoreView.swift */,
+			);
+			path = "Store Views";
+			sourceTree = "<group>";
+		};
+		410E2EFC27B01614004A0FA1 /* Resume Item Views */ = {
+			isa = PBXGroup;
+			children = (
+				414EC0E027A589B900C1C25F /* Resume Home Views */,
+				414EC0E127A58A5500C1C25F /* Resume List Views */,
+				4183807727A7061400CCC136 /* Detail Views */,
+			);
+			path = "Resume Item Views";
 			sourceTree = "<group>";
 		};
 		4125DD7827A0F4D500DA70EB = {
@@ -276,11 +322,12 @@
 			isa = PBXGroup;
 			children = (
 				4125DD8627A0F4D500DA70EB /* ContentView.swift */,
+				410E2EFC27B01614004A0FA1 /* Resume Item Views */,
 				4157B6FB27AD739700327674 /* Featured Views */,
+				410E2EFA27B01599004A0FA1 /* Feed Views */,
+				410E2EF927B0157E004A0FA1 /* Me Views */,
 				410E2EF427AF6BB8004A0FA1 /* Search Views */,
-				414EC0E027A589B900C1C25F /* Resume Home Views */,
-				414EC0E127A58A5500C1C25F /* Resume List Views */,
-				4183807727A7061400CCC136 /* Detail Views */,
+				410E2EFB27B015D2004A0FA1 /* Store Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,9 +335,9 @@
 		4125DDC927A37EE500DA70EB /* VIew Models */ = {
 			isa = PBXGroup;
 			children = (
+				4157B70027AD73DE00327674 /* FeaturedListVM.swift */,
 				414EC0CB27A37F5C00C1C25F /* ResumeHomeVM.swift */,
 				41D4B8EA27AA26C5005C4D4F /* EducationDetailVM.swift */,
-				4157B70027AD73DE00327674 /* FeaturedListVM.swift */,
 			);
 			path = "VIew Models";
 			sourceTree = "<group>";
@@ -495,6 +542,7 @@
 				4183807027A6E3E000CCC136 /* ProjectListView.swift in Sources */,
 				4183804C27A6CC1500CCC136 /* VolunteerListView.swift in Sources */,
 				4157B70127AD73DE00327674 /* FeaturedListVM.swift in Sources */,
+				410E2F0227B016AD004A0FA1 /* MeView.swift in Sources */,
 				414EC0CC27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */,
 				414EC0DD27A38C4300C1C25F /* WhiteButton.swift in Sources */,
 				4125DDBF27A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
@@ -510,8 +558,10 @@
 				4157B6FD27AD73C600327674 /* FeaturedListView.swift in Sources */,
 				41D4B8EB27AA26C5005C4D4F /* EducationDetailVM.swift in Sources */,
 				4125DDBA27A0F84B00DA70EB /* ResumeStore.swift in Sources */,
+				410E2EFE27B01686004A0FA1 /* FeedListView.swift in Sources */,
 				4183806027A6E24E00CCC136 /* SkillListView.swift in Sources */,
 				4183806427A6E2F100CCC136 /* LanguageListView.swift in Sources */,
+				410E2F0627B016C2004A0FA1 /* StoreView.swift in Sources */,
 				410E2EF627AF6BD4004A0FA1 /* SearchListView.swift in Sources */,
 				4183804427A5FE1800CCC136 /* ListContainerView.swift in Sources */,
 				4125DD9127A0F4D700DA70EB /* ResumeApp2.xcdatamodeld in Sources */,
@@ -525,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4183804127A5FCDA00CCC136 /* EducationListView.swift in Sources */,
+				410E2EFF27B01686004A0FA1 /* FeedListView.swift in Sources */,
 				4125DDB627A0F70C00DA70EB /* Resume.swift in Sources */,
 				4157B70227AD73DE00327674 /* FeaturedListVM.swift in Sources */,
 				414EC0D127A3810B00C1C25F /* ResumeHomeView.swift in Sources */,
@@ -537,6 +588,7 @@
 				4183804D27A6CC1500CCC136 /* VolunteerListView.swift in Sources */,
 				4183807527A6E4C400CCC136 /* VideoListView.swift in Sources */,
 				410E2EF727AF6BD4004A0FA1 /* SearchListView.swift in Sources */,
+				410E2F0727B016C2004A0FA1 /* StoreView.swift in Sources */,
 				414EC0CD27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */,
 				4157B6FE27AD73C600327674 /* FeaturedListView.swift in Sources */,
 				4125DDC027A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
@@ -547,6 +599,7 @@
 				4125DD9B27A0F4D700DA70EB /* ResumeApp2Tests.swift in Sources */,
 				4183806527A6E2F100CCC136 /* LanguageListView.swift in Sources */,
 				4183807127A6E3E000CCC136 /* ProjectListView.swift in Sources */,
+				410E2F0327B016AD004A0FA1 /* MeView.swift in Sources */,
 				4183806127A6E24E00CCC136 /* SkillListView.swift in Sources */,
 				414EC0DB27A38C4300C1C25F /* SmallVerticalButton.swift in Sources */,
 				4183805527A6E0E600CCC136 /* CertificateListView.swift in Sources */,
@@ -571,15 +624,18 @@
 				414EC0CE27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */,
 				4183807B27A7062C00CCC136 /* EducationDetailView.swift in Sources */,
 				4183805627A6E0E600CCC136 /* CertificateListView.swift in Sources */,
+				410E2F0027B01686004A0FA1 /* FeedListView.swift in Sources */,
 				4183804627A5FE1800CCC136 /* ListContainerView.swift in Sources */,
 				4183806E27A6E39300CCC136 /* ReferenceListView.swift in Sources */,
 				4157B70327AD73DE00327674 /* FeaturedListVM.swift in Sources */,
 				4125DDC127A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
 				4183804E27A6CC1500CCC136 /* VolunteerListView.swift in Sources */,
+				410E2F0827B016C2004A0FA1 /* StoreView.swift in Sources */,
 				4125DDA727A0F4D700DA70EB /* ResumeApp2UITestsLaunchTests.swift in Sources */,
 				4183806627A6E2F100CCC136 /* LanguageListView.swift in Sources */,
 				414EC0D227A3810B00C1C25F /* ResumeHomeView.swift in Sources */,
 				4183804A27A6C92400CCC136 /* WorkListView.swift in Sources */,
+				410E2F0427B016AD004A0FA1 /* MeView.swift in Sources */,
 				414EC0D627A3894800C1C25F /* LargeTopView.swift in Sources */,
 				4125DDBC27A0F84B00DA70EB /* ResumeStore.swift in Sources */,
 				4183807627A6E4C400CCC136 /* VideoListView.swift in Sources */,

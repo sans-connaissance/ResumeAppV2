@@ -13,14 +13,29 @@ struct ContentView: View {
         TabView {
             FeaturedListView()
                 .tabItem {
-                    Image(systemName: "star")
+                    Image(systemName: "figure.wave")
                     Text(verbatim: "Featured")
                 }.tag(0)
+            FeedListView()
+                .tabItem {
+                    Image(systemName: "figure.walk")
+                    Text(verbatim: "Feed")
+                }.tag(1)
+            MeView()
+                .tabItem {
+                    Image(systemName: "figure.stand")
+                    Text(verbatim: "Me")
+                }.tag(2)
             SearchListView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
-                    Text(verbatim: "Featured")
-                }.tag(0)
+                    Text(verbatim: "Search")
+                }.tag(3)
+            StoreView()
+                .tabItem {
+                    Image(systemName: "bag")
+                    Text(verbatim: "Store")
+                }.tag(4)
         }
     }
 }

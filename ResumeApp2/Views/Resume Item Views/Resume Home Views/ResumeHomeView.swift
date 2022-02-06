@@ -30,7 +30,7 @@ struct ResumeHomeView: View {
             }
             .onAppear(perform: {vm.setupResumeArrays(resume: resume)})
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(leading: Button {
+            .navigationBarItems(trailing: Button {
                 isPresented = false
             } label: {
                 Image(systemName: "x.circle.fill")
