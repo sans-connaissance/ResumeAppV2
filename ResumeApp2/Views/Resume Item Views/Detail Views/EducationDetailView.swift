@@ -23,7 +23,8 @@ struct EducationDetailView: View {
                     EducationStudyTypeView(resumeItem: resumeItem)
                     EducationAreaView(resumeItem: resumeItem)
                     
-                }.padding(.bottom, -1)
+                }
+                .padding(.bottom, -1)
                 
                 EducationInfoView(resumeItem: resumeItem)
                     .padding(.bottom)
@@ -75,7 +76,7 @@ struct EducationImageView: View {
         if let imageString = resumeItem.thumbnail {
             ResumeItemImageView(imageString: imageString)
                 .frame(width: screen.width)
-                .padding(.top, -50)
+               // .padding(.top, -50)
         }
     }
 }

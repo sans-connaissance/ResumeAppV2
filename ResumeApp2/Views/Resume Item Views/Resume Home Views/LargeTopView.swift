@@ -30,43 +30,43 @@ struct LargeTopView: View {
             if let imageString = basics.image {
                 KFImage(URL(string: imageString))
                     .resizable()
-                    .scaledToFill()
-                    .clipped()
+                    .scaledToFit()
+                    //.clipped()
             }
             
             VStack {
                 Spacer()
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        
-                        ForEach(skill.keywords!, id: \.self) { category in
-                            HStack {
-                                Text(category)
-                                    .font(.footnote)
-                                if !isLastCategory(category) {
-                                    Image(systemName: "circle.fill")
-                                        .foregroundColor(.blue)
-                                        .font(.system(size: 3))
-                                }
-                            }
-                        }
-                    }
-                }
-                HStack {
-                    Spacer()
-                    SmallVerticalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
-                        //
-                    }
-                    Spacer()
-                    WhiteButton(text: "play", imageName: "play.fill") {
-                        
-                    }.frame(width: 120)
-                    Spacer()
-                    SmallVerticalButton(text: "Info", isOnImage: "info.circle", isOffImage: "info.circle", isOn: true) {
-                        //
-                    }
-                    Spacer()
-                }
+//                ScrollView(.horizontal, showsIndicators: false) {
+//                    HStack {
+//
+//                        ForEach(skill.keywords!, id: \.self) { category in
+//                            HStack {
+//                                Text(category)
+//                                    .font(.footnote)
+//                                if !isLastCategory(category) {
+//                                    Image(systemName: "circle.fill")
+//                                        .foregroundColor(.blue)
+//                                        .font(.system(size: 3))
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//                HStack {
+//                    Spacer()
+//                    SmallVerticalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
+//                        //
+//                    }
+//                    Spacer()
+//                    WhiteButton(text: "play", imageName: "play.fill") {
+//
+//                    }.frame(width: 120)
+//                    Spacer()
+//                    SmallVerticalButton(text: "Info", isOnImage: "info.circle", isOffImage: "info.circle", isOn: true) {
+//                        //
+//                    }
+//                    Spacer()
+//                }
             }
         }
         .foregroundColor(.white)

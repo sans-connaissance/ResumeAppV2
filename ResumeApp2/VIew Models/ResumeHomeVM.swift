@@ -29,6 +29,7 @@ class ResumeHomeVM: ObservableObject {
     //Probably have to unwrap an array.
     @Published var skillTest: Skill = davidMalicke.skills![0]
     @Published var basics: Basics = davidMalicke.basics!
+    @Published var name: String = davidMalicke.basics!.name!
     
 //    init() {
 //        basics
