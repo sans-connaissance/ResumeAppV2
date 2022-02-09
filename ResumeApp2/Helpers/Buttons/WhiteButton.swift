@@ -27,8 +27,8 @@ struct WhiteButton: View {
 
             }
             .padding(.vertical, 6)
-            .foregroundColor(.white)
-            .background(Color.black)
+//            .foregroundColor(.white)
+//            .background(Color.black)
             .cornerRadius(3.0)
         }
         .padding([.leading, .trailing])
