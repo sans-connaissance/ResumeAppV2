@@ -34,7 +34,7 @@ struct ResumeHomeView: View {
             }
             .onAppear(perform: {vm.setupResumeArrays(resume: resume)})
             .navigationTitle(vm.name)
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
             .navigationBarItems(trailing: Button {
                 isPresented = false
             } label: {

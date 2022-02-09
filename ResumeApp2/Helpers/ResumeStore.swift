@@ -28,7 +28,7 @@ let basics = Basics(
     id: UUID().uuidString,
     name: "David Malicke",
     label: nil,
-    image: "https://picsum.photos/200/301",
+    image: "https://picsum.photos/1024/601",
     email: "davemalicke@gmail.com",
     phone: "734-231-6980",
     url: "https://www.linkedin.com/in/david-malicke-ios/",
