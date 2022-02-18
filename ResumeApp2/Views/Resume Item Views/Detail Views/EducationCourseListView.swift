@@ -16,7 +16,7 @@ struct EducationCourseListView: View {
             ForEach(courses, id: \.self) { course in
                 Text(course)
             }
-        }
+        }.listStyle(.sidebar)
     }
 }
 
