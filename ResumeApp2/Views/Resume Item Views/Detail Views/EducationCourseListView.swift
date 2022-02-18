@@ -15,6 +15,9 @@ struct EducationCourseListView: View {
         List {
             ForEach(courses, id: \.self) { course in
                 Text(course)
+                    .font(.headline.smallCaps())
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
             }
         }.listStyle(.sidebar)
     }

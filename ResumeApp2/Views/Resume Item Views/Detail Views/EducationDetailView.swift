@@ -12,6 +12,7 @@ struct EducationDetailView: View {
     @StateObject private var vm = EducationDetailVM()
     var resumeItem: Education
     @Binding var isPresented: Bool
+    @State var showCourses: Bool = false
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -28,9 +29,14 @@ struct EducationDetailView: View {
                 
                 EducationInfoView(resumeItem: resumeItem)
                     .padding(.bottom)
-                WhiteButton(text: "Courses", imageName: "book") {
-                    
+                if let courses = resumeItem.courses {
+                    WhiteButton(text: "Courses", imageName: "book") {
+                        showCourses = true
+                    }.sheet(isPresented: $showCourses) {
+                        EducationCourseListView(courses: courses)
+                    }
                 }
+                
             }.padding(.bottom)
             VStack(alignment: .leading) {
                 EducationDescriptionView(resumeItem: resumeItem)
@@ -78,7 +84,7 @@ struct EducationImageView: View {
         if let imageString = resumeItem.thumbnail {
             ResumeItemImageView(imageString: imageString)
                 .frame(width: screen.width)
-               // .padding(.top, -50)
+            // .padding(.top, -50)
         }
     }
 }
@@ -180,7 +186,7 @@ struct EducationAreaView: View {
 struct EducationDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            EducationDetailView(resumeItem: masterDegree, isPresented: .constant(true))
+            EducationDetailView(resumeItem: masterDegree, isPresented: .constant(true), showCourses: false)
         }
     }
 }
