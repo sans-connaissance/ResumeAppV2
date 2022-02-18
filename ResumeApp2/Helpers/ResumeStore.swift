@@ -88,6 +88,21 @@ let umCAIOperationsLead = Work(
     thumbnail: "https://frankfurtindustries.neocities.org/images/bg.jpg")
 
 
+let umCAIProjectManager = Work(
+    id: UUID().uuidString,
+    name: "University of Michigan, Office of the Provost",
+    department: "Center for Academic Innovation",
+    position: "Project Manager",
+    url: "https://ai.umich.edu",
+    startDate: "2015-06-01",
+    endDate: "2017-02-01",
+    summary: "Work with faculty and staff to produce massive open online coures (MOOCS).",
+    highlights: ["Managed the development, production, launch, and maintenance of 22 MOOCs and a variety of venture-funded digital education projects.",
+                 "Worked closely with faculty, learning experience designers, digital media specialists, and vendor partners throughout all course production processes",
+                 "Assembled and published course materials on vendor platforms."],
+    thumbnail: "https://frankfurtindustries.neocities.org/images/bg.jpg")
+
+
 let masterDegree = Education(
     id: UUID().uuidString,
     institution: "University of Michigan School of Information",
