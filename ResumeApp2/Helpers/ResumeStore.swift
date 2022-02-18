@@ -66,6 +66,27 @@ let frankfurtIndustries = Work(
     highlights: ["Design, develop and publish UM SalaryPub on the App Store.", "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.", "Built UM SalaryPub with SwiftUI following MVVM, and designed the CoreData model from the ground up. UM SalaryPub also takes advantage of an imported UIKit Charts package, which combined with SwiftUI and CoreData delivers a fast and responsive user experience."],
     thumbnail: "https://frankfurtindustries.neocities.org/images/bg.jpg")
 
+let umCAIOperationsLead = Work(
+    id: UUID().uuidString,
+    name: "University of Michigan, Office of the Provost",
+    department: "Center for Academic Innovation",
+    position: "Operations Lead",
+    url: "https://ai.umich.edu",
+    startDate: "2017-02-01",
+    endDate: "Present",
+    summary: "Work closely with CAI teams to develop and refine the Center's technical and process infrastructure.",
+    highlights: ["Areas of focus include internal communications, optimizing internal and external collaboration processes, and the development and maintenance of a variety of information processes.",
+                  "Improve project reporting and transparency by co-developing project management bandwidth boards.",
+                 "Lead development of the Center's use of Salesforce to manage data associated with the Center's portfolio of projects.",
+                 "Manage ingest of project portfolio data into Salesforce, and support the creation of key reports and insights",
+                 "Operationalize cross-team processes for keeping Salesforce up-to-date",
+                 "Built and launched new intranet to serve as the Center’s internal platform for policies, guidelines, and HR resources",
+                 "Co-developed copyright clearance process.",
+                  "Manage special projects including the design, acquisition, and deployment of Center-wide video conferencing systems, creating a new finance and accounting system, and introducing the use of Slack and Trello across teams and projects.",
+                 "Manage full-time staff; Co-develop new full-time and part-time positions",
+                 "Provide key resources and mentorship to team members that are developing new processes and areas of expertise."],
+    thumbnail: "https://frankfurtindustries.neocities.org/images/bg.jpg")
+
 
 let masterDegree = Education(
     id: UUID().uuidString,
