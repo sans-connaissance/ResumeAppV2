@@ -28,7 +28,9 @@ struct EducationDetailView: View {
                 
                 EducationInfoView(resumeItem: resumeItem)
                     .padding(.bottom)
-                WhiteButton(text: "Courses", imageName: "book") {}
+                WhiteButton(text: "Courses", imageName: "book") {
+                    
+                }
             }.padding(.bottom)
             VStack(alignment: .leading) {
                 EducationDescriptionView(resumeItem: resumeItem)
