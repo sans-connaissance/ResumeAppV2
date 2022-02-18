@@ -24,6 +24,7 @@ let davidMalicke = Resume(
     references: nil,
     projects: [umSalaryPub, annArborArtCenter])
 
+///MISSING IMAGE
 let basics = Basics(
     id: UUID().uuidString,
     name: "David Malicke",
@@ -52,6 +53,7 @@ let gitHub = Profile(
     url: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     thumbnail: nil)
 
+///MISSING URL
 let frankfurtIndustries = Work(
     id: UUID().uuidString,
     name: "Frankfurt Industries",
@@ -64,6 +66,7 @@ let frankfurtIndustries = Work(
     highlights: ["Design, develop and publish UM SalaryPub on the App Store.", "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.", "Built UM SalaryPub with SwiftUI following MVVM, and designed the CoreData model from the ground up. UM SalaryPub also takes advantage of an imported UIKit Charts package, which combined with SwiftUI and CoreData delivers a fast and responsive user experience."],
     thumbnail: "https://frankfurtindustries.neocities.org/images/bg.jpg")
 
+
 let masterDegree = Education(
     id: UUID().uuidString,
     institution: "University of Michigan School of Information",
@@ -73,14 +76,22 @@ let masterDegree = Education(
     location: "Ann Arbor, MI",
     startDate: "2009-01-03",
     endDate: "2011-04-15",
-    score: "3.8",
-    courses: ["SI 501: Contextual Inquiry and Consulting Foundations",
+    score: "3.7",
+    courses: ["SI 500: Information in social systems: Collections, flows, and processing",
+              "SI 501: Contextual Inquiry and Consulting Foundations",
               "SI 502: Networked Computing: Storage, Communication, and Processing",
               "SI 510: Data Security and Privacy: Legal, Policy and Enterprise Issues",
               "SI 543: Introductory Programming",
               "SI 572: Database Application Design",
+              "SI 580: Understanding Records and Archives",
               "SI 622: Needs Assessment and Usability Evaluation",
-              "SI 631: Content Management Systems"],
+              "SI 631: Content Management Systems",
+              "SI 632: Appraisal and Collection Development",
+              "SI 634: Content Management Systems Configuration and Site Building",
+             "SI 626: Management of Libraries and Information Services",
+              "SI 639: Web Archiving",
+              "SI 655: Management of Electronic Records",
+             "COMM 776: Media Theory Seminar in the Social Science Traditions"],
     educationType: "formal",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et pulvinar justo. Fusce nibh justo, lacinia ac congue a, ultricies ut tortor. Donec commodo leo a sagittis fermentum. Quisque varius euismod urna, in euismod magna mollis a. Phasellus hendrerit ultricies consequat. Integer gravida ornare arcu vitae varius. Ut dapibus tortor et vehicula condimentum. Donec iaculis massa quis maximus viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat quam, consectetur eget magna at, consectetur sollicitudin tellus",
     thumbnail: "https://www.med.umich.edu/ott/mm/images/block-m-feed.jpg")
@@ -95,13 +106,7 @@ let bachelorDegree = Education(
     startDate: nil,
     endDate: "2007-12-15",
     score: "3.8",
-    courses: ["SI 501: Contextual Inquiry and Consulting Foundations",
-              "SI 502: Networked Computing: Storage, Communication, and Processing",
-              "SI 510: Data Security and Privacy: Legal, Policy and Enterprise Issues",
-              "SI 543: Introductory Programming",
-              "SI 572: Database Application Design",
-              "SI 622: Needs Assessment and Usability Evaluation",
-              "SI 631: Content Management Systems"],
+    courses: nil,
     educationType: "formal",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et pulvinar justo. Fusce nibh justo, lacinia ac congue a, ultricies ut tortor. Donec commodo leo a sagittis fermentum. Quisque varius euismod urna, in euismod magna mollis a. Phasellus hendrerit ultricies consequat. Integer gravida ornare arcu vitae varius. Ut dapibus tortor et vehicula condimentum. Donec iaculis massa quis maximus viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat quam, consectetur eget magna at, consectetur sollicitudin tellus",
     thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Siena_Heights_University_Campus.JPG/640px-Siena_Heights_University_Campus.JPG")
