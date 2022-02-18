@@ -12,7 +12,7 @@ let resumeStore: [Resume] = [davidMalicke]
 let davidMalicke = Resume(
     id: UUID().uuidString,
     basics: basics,
-    work: [frankfurtIndustries],
+    work: [frankfurtIndustries, umCAIOperationsLead, umCAIProjectManager, umMedOpenEd],
     volunteer: nil,
     education: [masterDegree, bachelorDegree, associateDegree, hackingWithSwift],
     awards: nil, // are the academic things worth putting here?
@@ -100,6 +100,25 @@ let umCAIProjectManager = Work(
     highlights: ["Managed the development, production, launch, and maintenance of 22 MOOCs and a variety of venture-funded digital education projects.",
                  "Worked closely with faculty, learning experience designers, digital media specialists, and vendor partners throughout all course production processes",
                  "Assembled and published course materials on vendor platforms."],
+    thumbnail: "https://frankfurtindustries.neocities.org/images/bg.jpg")
+
+let umMedOpenEd = Work(
+    id: UUID().uuidString,
+    name: "University of Michigan",
+    department: "Medical School Information Services",
+    position: "Open Education Operations Specialist",
+    url: "https://open.umich.edu",
+    startDate: "2010-04-01",
+    endDate: "2015-06-01",
+    summary: "Work with faculty and staff to produce Open Educational Resources (OER).",
+    highlights: ["Administered open.umich.edu website and digital archive",
+                 "Led development of the initiative’s collection policy and strategy",
+                 "Managed publishing processes and activities",
+                 "Provided OER and MOOC publishing services for faculty, students, and staff",
+                 "Represented Open.Michigan at conferences and events",
+                 "Contributed to Open.Michigan blog and social media presence",
+                 "Fostered and supported strategic relationships with individuals and organizations",
+                 "Hired, trained, and supervised staff."],
     thumbnail: "https://frankfurtindustries.neocities.org/images/bg.jpg")
 
 
