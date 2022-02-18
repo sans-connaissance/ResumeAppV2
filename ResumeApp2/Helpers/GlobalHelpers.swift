@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreMedia
 
 extension LinearGradient {
     static let blackOpacityGradient = LinearGradient(
@@ -94,3 +95,4 @@ enum Size: String, CaseIterable {
     case medium
     case large
 }
+
