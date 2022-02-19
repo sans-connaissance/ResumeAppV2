@@ -25,10 +25,8 @@ struct ResumeHomeView: View {
                         LargeTopView(skill: vm.skillTest, basics: vm.basics)
                             .frame(width: screen.width, height: screen.height / 3)
                           // .padding(.top, -110)
-                        ListContainerView(array: vm.educationArray, category: .education, size: .medium, isPresented: $isPresented)
-                        ListContainerView(array: vm.educationArray, category: .education, size: .medium, isPresented: $isPresented)
-                        ListContainerView(array: vm.educationArray, category: .education, size: .medium, isPresented: $isPresented)
-                        ListContainerView(array: vm.educationArray, category: .education, size: .medium, isPresented: $isPresented)
+                        ListContainerView(array: vm.educationArray, category: .education, size: .large, isPresented: $isPresented)
+                        ListContainerView(array: vm.experienceArray, category: .work, size: .medium, isPresented: $isPresented)
                     }
                 }
             }

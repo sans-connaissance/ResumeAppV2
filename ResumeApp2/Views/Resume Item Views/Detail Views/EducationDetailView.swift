@@ -13,22 +13,48 @@ struct EducationDetailView: View {
     var resumeItem: Education
     @Binding var isPresented: Bool
     @State var showCourses: Bool = false
+    let screen = UIScreen.main.bounds
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .center) {
-                EducationImageView(resumeItem: resumeItem)
-                EducationInstitutionView(resumeItem: resumeItem)
-                    .padding(.bottom, -5)
-                VStack(alignment: .center) {
-                    EducationStudyTypeView(resumeItem: resumeItem)
-                    EducationAreaView(resumeItem: resumeItem)
-                    
+                /// TOP IMAGE
+                if let imageString = resumeItem.thumbnail {
+                    ResumeItemImageView(imageString: imageString)
+                        .frame(width: screen.width)
+                    // .padding(.top, -50)
                 }
-                .padding(.bottom, -1)
+                
+                /// INSTITUTION
+                if let institution = resumeItem.institution {
+                    Text(institution)
+                        .font(.caption2.lowercaseSmallCaps())
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom, -5)
+                }
+                
+                /// STUDY TYPE AND AREA OF STUDY
+                VStack(alignment: .center) {
+                    if let studyType = resumeItem.studyType {
+                        Text(studyType)
+                            .font(.headline.smallCaps())
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                            .lineSpacing(-10)
+                    }
+                    if let area = resumeItem.area {
+                        Text(area)
+                            .font(.headline.smallCaps())
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                    }
+                    
+                }.padding(.bottom, -1)
                 
                 EducationInfoView(resumeItem: resumeItem)
                     .padding(.bottom)
+                
                 if let courses = resumeItem.courses {
                     WhiteButton(text: "Courses", imageName: "book") {
                         showCourses = true
@@ -36,20 +62,26 @@ struct EducationDetailView: View {
                         EducationCourseListView(courses: courses)
                     }
                 }
-                
             }.padding(.bottom)
+            
+            /// DESCRIPTION
             VStack(alignment: .leading) {
-                EducationDescriptionView(resumeItem: resumeItem)
+                if let description = resumeItem.description {
+                    Text("Description")
+                        .font(.caption2)
+                        .fontWeight(.bold)
+                    Text(description)
+                        .font(.caption2)
+                        .fontWeight(.regular)
+                }
             }.padding(.leading)
             
-            //THESE NEED TO BE MADE CONDITIONAL IN CASE THEY DONT EXIST
+            // THESE NEED TO BE MADE CONDITIONAL IN CASE THEY DONT EXIST
             ScrollView(showsIndicators: false) {
                 LazyVStack {
                     ListContainerView(array: vm.educationDetailViewProjects, category: .project, size: .small, isPresented: $isPresented)
-                    
                 }
             }
-            
         }
         .onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
         .navigationBarTitleDisplayMode(.inline)
@@ -59,45 +91,6 @@ struct EducationDetailView: View {
             Image(systemName: "x.circle.fill")
                 .font(.title2)
         })
-    }
-}
-
-struct EducationDescriptionView: View {
-    var resumeItem: Education
-    
-    var body: some View {
-        if let description = resumeItem.description {
-            Text("Description")
-                .font(.caption2)
-                .fontWeight(.bold)
-            Text(description)
-                .font(.caption2)
-                .fontWeight(.regular)
-        }
-    }
-}
-
-struct EducationImageView: View {
-    var resumeItem: Education
-    let screen = UIScreen.main.bounds
-    var body: some View {
-        if let imageString = resumeItem.thumbnail {
-            ResumeItemImageView(imageString: imageString)
-                .frame(width: screen.width)
-            // .padding(.top, -50)
-        }
-    }
-}
-
-struct EducationTagView: View {
-    var body: some View {
-        HStack(spacing: 2) {
-            Image(systemName: "graduationcap.circle")
-                .font(.footnote)
-            Text("EDUCATION")
-                .font(.caption2)
-                .fontWeight(.bold)
-        }
     }
 }
 
@@ -143,42 +136,14 @@ struct EducationInfoView: View {
     }
 }
 
-struct EducationInstitutionView: View {
-    var resumeItem: Education
-    
+struct EducationTagView: View {
     var body: some View {
-        if let institution = resumeItem.institution {
-            Text(institution)
-                .font(.caption2.lowercaseSmallCaps())
-                .fontWeight(.semibold)
-                .multilineTextAlignment(.center)
-        }
-    }
-}
-
-struct EducationStudyTypeView: View {
-    var resumeItem: Education
-    
-    var body: some View {
-        if let studyType = resumeItem.studyType {
-            Text(studyType)
-                .font(.headline.smallCaps())
-                .fontWeight(.heavy)
-                .multilineTextAlignment(.center)
-                .lineSpacing(-10)
-        }
-    }
-}
-
-struct EducationAreaView: View {
-    var resumeItem: Education
-    
-    var body: some View {
-        if let area = resumeItem.area {
-            Text(area)
-                .font(.headline.smallCaps())
-                .fontWeight(.heavy)
-                .multilineTextAlignment(.center)
+        HStack(spacing: 2) {
+            Image(systemName: "graduationcap.circle")
+                .font(.footnote)
+            Text("EDUCATION")
+                .font(.caption2)
+                .fontWeight(.bold)
         }
     }
 }
