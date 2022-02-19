@@ -121,6 +121,16 @@ let umMedOpenEd = Work(
                  "Hired, trained, and supervised staff."],
     thumbnail: "https://frankfurtindustries.neocities.org/images/bg.jpg")
 
+let altSpringBreak = Volunteer(
+    id: UUID().uuidString,
+    organization: "United States Center for Legislative Archives",
+    position: "Electronic Record Management Volunteer",
+    url: "https://www.archives.gov",
+    startDate: "2010-03-01",
+    endDate: "2010-03-01",
+    summary: "Alternative Spring Break Volunteer.",
+    highlights: ["Meet with the Archivist for the United States of America.", "Conduct fact finding research for the Next-Generation Finding Aid.", "Present recommendations to the Center for Legislative Archives' Next-Generation Finding Aid team."],
+    thumbnail: "https://www.med.umich.edu/ott/mm/images/block-m-feed.jpg")
 
 let masterDegree = Education(
     id: UUID().uuidString,

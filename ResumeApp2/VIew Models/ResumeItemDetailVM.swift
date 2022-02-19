@@ -11,7 +11,7 @@ import SwiftUI
 class ResumeItemDetailVM: ObservableObject {
     
     //THIS NEEDS TO BE RENAMED DOESN"T MAKE SENSE
-    @Published var educationDetailViewArray: [Education] = []
+   // @Published var educationDetailViewArray: [Education] = []
     @Published var educationDetailViewProjects: [Project] = []
     @Published var workDetailViewProjects: [Project] = []
     

@@ -400,9 +400,9 @@
 		4183807727A7061400CCC136 /* Detail Views */ = {
 			isa = PBXGroup;
 			children = (
+				4138BFA927C138BE00A33680 /* WorkDetailView.swift */,
 				4183807827A7062C00CCC136 /* EducationDetailView.swift */,
 				4138BFA527BF4AEA00A33680 /* EducationCourseListView.swift */,
-				4138BFA927C138BE00A33680 /* WorkDetailView.swift */,
 			);
 			path = "Detail Views";
 			sourceTree = "<group>";
