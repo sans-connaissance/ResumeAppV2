@@ -8,25 +8,25 @@
 import Foundation
 import SwiftUI
 
-class EducationDetailVM: ObservableObject {
+class ResumeItemDetailVM: ObservableObject {
     
     //THIS NEEDS TO BE RENAMED DOESN"T MAKE SENSE
     @Published var educationDetailViewArray: [Education] = []
     @Published var educationDetailViewProjects: [Project] = []
+    @Published var workDetailViewProjects: [Project] = []
     
-//    init() {
-//        setupEducationArrays()
-//    }
-    
-    func setupEducationArrays(resumeItem: Education) {
-        if let educationItems: [Education] = davidMalicke.education {
-            for item in educationItems {
-                if item.id != resumeItem.id && item.educationType == "formal" {
-                    educationDetailViewArray.append(item)
+    func setupWorkArrays(resumeItem: Work) {
+        if let workProjects: [Project] = davidMalicke.projects {
+            for item in workProjects {
+                //TO DO: Figure out how to change this based on a passed in string by the user.
+                if item.entity == "Frankfurt Industries" {
+                    workDetailViewProjects.append(item)
                 }
             }
         }
-        
+    }
+    
+    func setupEducationArrays(resumeItem: Education) {
         if let educationProjects: [Project] = davidMalicke.projects {
             for item in educationProjects {
                 if item.entity == "Master Degree" {
@@ -34,6 +34,5 @@ class EducationDetailVM: ObservableObject {
                 }
             }
         }
-        
     }
 }

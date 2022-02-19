@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct WorkDetailView: View {
-    @Environment(\.defaultMinListRowHeight) var minRowHeight
-    @StateObject private var vm = EducationDetailVM()
+    @StateObject private var vm = ResumeItemDetailVM()
     @Binding var isPresented: Bool
     let screen = UIScreen.main.bounds
-    var resumeItem: Work
+    let resumeItem: Work
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -83,14 +82,17 @@ struct WorkDetailView: View {
                     }.padding()
                 }
             }
-            // THESE NEED TO BE MADE CONDITIONAL IN CASE THEY DONT EXIST
-            ScrollView(showsIndicators: false) {
-                LazyVStack {
-                    ListContainerView(array: vm.educationDetailViewProjects, category: .project, size: .small, isPresented: $isPresented)
+            if let projects = vm.workDetailViewProjects {
+                if projects.count > 0 {
+                    ScrollView(showsIndicators: false) {
+                        LazyVStack {
+                            ListContainerView(array: projects, category: .project, size: .small, isPresented: $isPresented)
+                        }
+                    }
                 }
             }
         }
-        // .onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
+        .onAppear(perform: { vm.setupWorkArrays(resumeItem: resumeItem) })
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing: Button {
             isPresented = false

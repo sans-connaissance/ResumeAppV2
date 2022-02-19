@@ -9,11 +9,11 @@ import Kingfisher
 import SwiftUI
 
 struct EducationDetailView: View {
-    @StateObject private var vm = EducationDetailVM()
+    @StateObject private var vm = ResumeItemDetailVM()
     @State var showCourses: Bool = false
     @Binding var isPresented: Bool
     let screen = UIScreen.main.bounds
-    var resumeItem: Education
+    let resumeItem: Education
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -76,10 +76,12 @@ struct EducationDetailView: View {
                 }
             }.padding(.leading)
             
-            // THESE NEED TO BE MADE CONDITIONAL IN CASE THEY DONT EXIST
-            ScrollView(showsIndicators: false) {
-                LazyVStack {
-                    ListContainerView(array: vm.educationDetailViewProjects, category: .project, size: .small, isPresented: $isPresented)
+            
+            if let projects = vm.educationDetailViewProjects {
+                ScrollView(showsIndicators: false) {
+                    LazyVStack {
+                        ListContainerView(array: projects, category: .project, size: .small, isPresented: $isPresented)
+                    }
                 }
             }
         }

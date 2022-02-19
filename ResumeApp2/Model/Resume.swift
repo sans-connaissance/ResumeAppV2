@@ -11,7 +11,6 @@ struct Resume: Identifiable, Hashable {
 //    static func == (lhs: Resume, rhs: Resume) -> Bool {
 //        return lhs.id == rhs.id
 //    }
-    
     var id: String
     var basics: Basics?
     var work: [Work]?
