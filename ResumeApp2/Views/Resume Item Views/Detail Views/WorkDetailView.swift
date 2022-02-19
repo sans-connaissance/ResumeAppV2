@@ -1,81 +1,88 @@
 //
-//  EducationDetailView.swift
+//  WorkDetailView.swift
 //  ResumeApp2
 //
-//  Created by David Malicke on 1/30/22.
+//  Created by David Malicke on 2/19/22.
 //
 
-import Kingfisher
 import SwiftUI
 
-struct EducationDetailView: View {
+struct WorkDetailView: View {
+    @Environment(\.defaultMinListRowHeight) var minRowHeight
     @StateObject private var vm = EducationDetailVM()
-    @State var showCourses: Bool = false
     @Binding var isPresented: Bool
     let screen = UIScreen.main.bounds
-    var resumeItem: Education
+    var resumeItem: Work
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .center) {
                 /// TOP IMAGE
+                
                 if let imageString = resumeItem.thumbnail {
                     ResumeItemImageView(imageString: imageString)
                         .frame(width: screen.width)
                     // .padding(.top, -50)
                 }
                 
-                /// INSTITUTION
-                if let institution = resumeItem.institution {
-                    Text(institution)
+                /// NAME
+                if let name = resumeItem.name {
+                    Text(name)
                         .font(.caption2.lowercaseSmallCaps())
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
                         .padding(.bottom, -5)
                 }
                 
-                /// STUDY TYPE AND AREA OF STUDY
+                /// DEPARTMENT AND POSITION
                 VStack(alignment: .center) {
-                    if let studyType = resumeItem.studyType {
-                        Text(studyType)
+                    if let department = resumeItem.department {
+                        Text(department)
                             .font(.headline.smallCaps())
                             .fontWeight(.heavy)
                             .multilineTextAlignment(.center)
                             .lineSpacing(-10)
                     }
-                    if let area = resumeItem.area {
-                        Text(area)
+                    if let position = resumeItem.position {
+                        Text(position)
                             .font(.headline.smallCaps())
                             .fontWeight(.heavy)
                             .multilineTextAlignment(.center)
                     }
-                    
                 }.padding(.bottom, -1)
                 
-                EducationInfoView(resumeItem: resumeItem)
+                WorkInfoView(resumeItem: resumeItem)
                     .padding(.bottom)
                 
-                if let courses = resumeItem.courses {
-                    WhiteButton(text: "Courses", imageName: "book") {
-                        showCourses = true
-                    }.sheet(isPresented: $showCourses) {
-                        EducationCourseListView(courses: courses)
+                /// SUMMARY
+                VStack(alignment: .leading) {
+                    if let summary = resumeItem.summary {
+                        Text("Summary")
+                            .font(.caption2)
+                            .fontWeight(.bold)
+                        Text(summary)
+                            .font(.caption2)
+                            .fontWeight(.regular)
                     }
+                }.padding()
+                
+                if let highlights = resumeItem.highlights {
+                    VStack(alignment: .leading) {
+                        Text("Highlights")
+                            .font(.caption2)
+                            .fontWeight(.bold)
+                        ForEach(highlights, id: \.self) { highlight in
+                            HStack {
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 5))
+                                Text(highlight)
+                                    .font(.caption2)
+                                    .fontWeight(.regular)
+                            }.padding(.bottom, 5)
+                        }
+                    }.padding()
                 }
-            }.padding(.bottom)
-            
-            /// DESCRIPTION
-            VStack(alignment: .leading) {
-                if let description = resumeItem.description {
-                    Text("Description")
-                        .font(.caption2)
-                        .fontWeight(.bold)
-                    Text(description)
-                        .font(.caption2)
-                        .fontWeight(.regular)
-                }
-            }.padding(.leading)
-            
+            }
             // THESE NEED TO BE MADE CONDITIONAL IN CASE THEY DONT EXIST
             ScrollView(showsIndicators: false) {
                 LazyVStack {
@@ -83,7 +90,7 @@ struct EducationDetailView: View {
                 }
             }
         }
-        .onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
+        // .onAppear(perform: { vm.setupEducationArrays(resumeItem: resumeItem) })
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing: Button {
             isPresented = false
@@ -94,8 +101,8 @@ struct EducationDetailView: View {
     }
 }
 
-struct EducationInfoView: View {
-    var resumeItem: Education
+struct WorkInfoView: View {
+    var resumeItem: Work
     
     var body: some View {
         HStack {
@@ -113,45 +120,23 @@ struct EducationInfoView: View {
                         .fontWeight(.regular)
                 }
             }
-            if let gpa = resumeItem.score {
-                HStack {
-                    Text("GPA")
-                        .font(.caption2.lowercaseSmallCaps())
-                        .fontWeight(.regular)
-                    Text(gpa)
-                        .font(.caption2.lowercaseSmallCaps())
-                        .fontWeight(.regular)
-                }
-            }
-            if let location = resumeItem.location {
+            if let url = resumeItem.url {
                 HStack(spacing: 2) {
                     Image(systemName: "globe")
                         .font(.caption2)
-                    Text(location)
-                        .font(.caption2)
-                        .fontWeight(.regular)
+                    Link(destination: URL(string: url)!) {
+                        Text("Website")
+                            .font(.caption2)
+                            .fontWeight(.regular)
+                    }
                 }
             }
         }
     }
 }
 
-struct EducationTagView: View {
-    var body: some View {
-        HStack(spacing: 2) {
-            Image(systemName: "graduationcap.circle")
-                .font(.footnote)
-            Text("EDUCATION")
-                .font(.caption2)
-                .fontWeight(.bold)
-        }
-    }
-}
-
-struct EducationDetailView_Previews: PreviewProvider {
+struct WorkDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            EducationDetailView(showCourses: false, isPresented: .constant(true), resumeItem: masterDegree)
-        }
+        WorkDetailView(isPresented: .constant(true), resumeItem: frankfurtIndustries)
     }
 }

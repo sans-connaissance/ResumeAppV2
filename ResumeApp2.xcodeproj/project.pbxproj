@@ -44,6 +44,9 @@
 		4138BFA627BF4AEA00A33680 /* EducationCourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFA527BF4AEA00A33680 /* EducationCourseListView.swift */; };
 		4138BFA727BF4AEA00A33680 /* EducationCourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFA527BF4AEA00A33680 /* EducationCourseListView.swift */; };
 		4138BFA827BF4AEA00A33680 /* EducationCourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFA527BF4AEA00A33680 /* EducationCourseListView.swift */; };
+		4138BFAA27C138BE00A33680 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFA927C138BE00A33680 /* WorkDetailView.swift */; };
+		4138BFAB27C138BE00A33680 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFA927C138BE00A33680 /* WorkDetailView.swift */; };
+		4138BFAC27C138BE00A33680 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFA927C138BE00A33680 /* WorkDetailView.swift */; };
 		414EC0CC27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CB27A37F5C00C1C25F /* ResumeHomeVM.swift */; };
 		414EC0CD27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CB27A37F5C00C1C25F /* ResumeHomeVM.swift */; };
 		414EC0CE27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CB27A37F5C00C1C25F /* ResumeHomeVM.swift */; };
@@ -151,6 +154,7 @@
 		4125DDBE27A37B9400DA70EB /* ResumeItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItemImageView.swift; sourceTree = "<group>"; };
 		4125DDC527A37D5500DA70EB /* GlobalHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		4138BFA527BF4AEA00A33680 /* EducationCourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCourseListView.swift; sourceTree = "<group>"; };
+		4138BFA927C138BE00A33680 /* WorkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailView.swift; sourceTree = "<group>"; };
 		414EC0CB27A37F5C00C1C25F /* ResumeHomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeHomeVM.swift; sourceTree = "<group>"; };
 		414EC0CF27A3810B00C1C25F /* ResumeHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeHomeView.swift; sourceTree = "<group>"; };
 		414EC0D327A3894800C1C25F /* LargeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTopView.swift; sourceTree = "<group>"; };
@@ -398,6 +402,7 @@
 			children = (
 				4183807827A7062C00CCC136 /* EducationDetailView.swift */,
 				4138BFA527BF4AEA00A33680 /* EducationCourseListView.swift */,
+				4138BFA927C138BE00A33680 /* WorkDetailView.swift */,
 			);
 			path = "Detail Views";
 			sourceTree = "<group>";
@@ -566,6 +571,7 @@
 				410E2EFE27B01686004A0FA1 /* FeedListView.swift in Sources */,
 				4138BFA627BF4AEA00A33680 /* EducationCourseListView.swift in Sources */,
 				4183806027A6E24E00CCC136 /* SkillListView.swift in Sources */,
+				4138BFAA27C138BE00A33680 /* WorkDetailView.swift in Sources */,
 				4183806427A6E2F100CCC136 /* LanguageListView.swift in Sources */,
 				410E2F0627B016C2004A0FA1 /* StoreView.swift in Sources */,
 				410E2EF627AF6BD4004A0FA1 /* SearchListView.swift in Sources */,
@@ -605,6 +611,7 @@
 				4125DD9B27A0F4D700DA70EB /* ResumeApp2Tests.swift in Sources */,
 				4183806527A6E2F100CCC136 /* LanguageListView.swift in Sources */,
 				4183807127A6E3E000CCC136 /* ProjectListView.swift in Sources */,
+				4138BFAB27C138BE00A33680 /* WorkDetailView.swift in Sources */,
 				410E2F0327B016AD004A0FA1 /* MeView.swift in Sources */,
 				4183806127A6E24E00CCC136 /* SkillListView.swift in Sources */,
 				414EC0DB27A38C4300C1C25F /* SmallVerticalButton.swift in Sources */,
@@ -641,6 +648,7 @@
 				410E2F0827B016C2004A0FA1 /* StoreView.swift in Sources */,
 				4125DDA727A0F4D700DA70EB /* ResumeApp2UITestsLaunchTests.swift in Sources */,
 				4183806627A6E2F100CCC136 /* LanguageListView.swift in Sources */,
+				4138BFAC27C138BE00A33680 /* WorkDetailView.swift in Sources */,
 				414EC0D227A3810B00C1C25F /* ResumeHomeView.swift in Sources */,
 				4183804A27A6C92400CCC136 /* WorkListView.swift in Sources */,
 				410E2F0427B016AD004A0FA1 /* MeView.swift in Sources */,

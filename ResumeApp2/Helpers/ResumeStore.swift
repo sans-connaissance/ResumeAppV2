@@ -63,7 +63,7 @@ let frankfurtIndustries = Work(
     startDate: "2021-02-01",
     endDate: "Present",
     summary: "Design, develop, and publish iOS apps for Frankfurt Industries, LLC.",
-    highlights: ["Design, develop and publish UM SalaryPub on the App Store.", "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.", "Built UM SalaryPub with SwiftUI following MVVM, and designed the CoreData model from the ground up. UM SalaryPub also takes advantage of an imported UIKit Charts package, which combined with SwiftUI and CoreData delivers a fast and responsive user experience."],
+    highlights: ["Design, develop and publish UM SalaryPub on the App Store.", "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.", "Built UM SalaryPub with SwiftUI following MVVM, and designed the CoreData model from the ground up.", "UM SalaryPub also takes advantage of an imported UIKit Charts package, which combined with SwiftUI and CoreData delivers a fast and responsive user experience."],
     thumbnail: "https://frankfurtindustries.neocities.org/images/bg.jpg")
 
 let umCAIOperationsLead = Work(
