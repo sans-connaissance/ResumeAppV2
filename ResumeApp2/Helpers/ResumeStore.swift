@@ -15,14 +15,16 @@ let davidMalicke = Resume(
     work: [frankfurtIndustries, umCAIOperationsLead, umCAIProjectManager, umMedOpenEd],
     volunteer: [altSpringBreak],
     education: [masterDegree, bachelorDegree, associateDegree, hackingWithSwift],
-    awards: nil, // are the academic things worth putting here?
+    awards: [phiKappaPhi, alphaSigmaLambda], // are the academic things worth putting here?
     certificates: [coreDataCert, leBienLeJusteCert],
     publications: [medAndSciencePub],
     skills: [foundationalSkill, iosDev, operations, digitalPublishing, intellectualProperty, business],
     languages: [english, french],
-    interests: nil,
-    references: nil,
-    projects: [umSalaryPub, annArborArtCenter])
+    interests: [programming],
+    references: [katie],
+    projects: [umSalaryPub, annArborArtCenter],
+    videos: [testVideo])
+
 
 ///MISSING IMAGE
 let basics = Basics(
@@ -241,6 +243,22 @@ let hackingWithSwift = Education(
     educationType: "self-paced learning",
     thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MacombcommunitycollegeMIUSA.jpg/640px-MacombcommunitycollegeMIUSA.jpg")
 
+let phiKappaPhi = Award(
+    id: UUID().uuidString,
+    title: "Member",
+    date: "2011-04-01",
+    awarder: "The Honor Society of Phi Kappa Phi.",
+    summary: "Membership is by invitation only to the top 10 percent of graduate students at the university.",
+    thumbnail: "https://picsum.photos/200/303")
+
+let alphaSigmaLambda = Award(
+    id: UUID().uuidString,
+    title: "Member",
+    date: "2007-12-01",
+    awarder: "The Iota Zeta chapter of Alpha Sigma Lambda.",
+    summary: "Membership is awarded to students who accomplish academic excellence while facing competing interests of home and work.",
+    thumbnail: "https://picsum.photos/200/303")
+
 let coreDataCert = Certificate(
     id: UUID().uuidString,
     name: "Core Data in iOS",
@@ -312,6 +330,18 @@ let french = Language(
     language: "French",
     fluency: "B1")
 
+let programming = Interest(
+    id: UUID().uuidString,
+    name: "Programming",
+    keywords: ["Coding", "Testing", "Debugging"],
+    thumbnail: "https://picsum.photos/200/301")
+
+let katie = Reference(
+    id: UUID().uuidString,
+    name: "Kathleen Malicke",
+    reference: "Dave is such a pro!",
+    thumbnail: "https://picsum.photos/200/301")
+
 let umSalaryPub = Project(
     id: UUID().uuidString,
     name: "UM SalaryPub",
@@ -343,3 +373,9 @@ let annArborArtCenter = Project(
     thumbnail: "https://www.mlive.com/resizer/tl5HqUHf3rcnt_ijY5avRjYEohk=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/NR7AIFZ6EJEFDBK65FWP6KQ2RA.jpg",
     thumbnails: ["https://picsum.photos/200/301", "https://picsum.photos/200/302", "https://picsum.photos/200/303"],
     videos: nil)
+
+let testVideo = Video(
+    id: UUID().uuidString,
+    name: "Test Video",
+    videoURL: "www.youtube.com",
+    thumbnail: "https://picsum.photos/200/302")

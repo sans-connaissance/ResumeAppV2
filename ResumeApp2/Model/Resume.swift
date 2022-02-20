@@ -24,6 +24,7 @@ struct Resume: Identifiable, Hashable {
     var interests: [Interest]?
     var references: [Reference]?
     var projects: [Project]?
+    var videos: [Video]?
 }
 
 struct Basics: Identifiable, Hashable {
