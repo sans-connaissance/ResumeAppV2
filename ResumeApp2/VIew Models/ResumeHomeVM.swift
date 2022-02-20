@@ -43,6 +43,19 @@ class ResumeHomeVM: ObservableObject {
             self.basics = basics
         }
         
+
+        if let workItems: [Work] = resume.work {
+            for item in workItems {
+                experienceArray.append(item)
+            }
+        }
+        
+        if let volunteerItems: [Volunteer] = resume.volunteer {
+            for item in volunteerItems {
+                volunteerArray.append(item)
+            }
+        }
+        
         if let educationItems: [Education] = resume.education {
             for item in educationItems {
                 if item.educationType == "formal" {
@@ -50,11 +63,7 @@ class ResumeHomeVM: ObservableObject {
                 }
             }
         }
-        if let workItems: [Work] = resume.work {
-            for item in workItems {
-                experienceArray.append(item)
-            }
-        }
+        
         if let projectItems: [Project] = resume.projects {
             for item in projectItems {
                 projectArray.append(item)

@@ -13,7 +13,7 @@ let davidMalicke = Resume(
     id: UUID().uuidString,
     basics: basics,
     work: [frankfurtIndustries, umCAIOperationsLead, umCAIProjectManager, umMedOpenEd],
-    volunteer: nil,
+    volunteer: [altSpringBreak],
     education: [masterDegree, bachelorDegree, associateDegree, hackingWithSwift],
     awards: nil, // are the academic things worth putting here?
     certificates: [coreDataCert, leBienLeJusteCert],

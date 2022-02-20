@@ -15,6 +15,7 @@ class ResumeItemDetailVM: ObservableObject {
     @Published var educationDetailViewProjects: [Project] = []
     @Published var workDetailViewProjects: [Project] = []
     
+    
     func setupWorkArrays(resumeItem: Work) {
         if let workProjects: [Project] = davidMalicke.projects {
             for item in workProjects {

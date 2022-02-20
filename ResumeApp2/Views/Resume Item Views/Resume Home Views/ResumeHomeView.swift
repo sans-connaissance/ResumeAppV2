@@ -27,6 +27,7 @@ struct ResumeHomeView: View {
                           // .padding(.top, -110)
                         ListContainerView(array: vm.educationArray, category: .education, size: .large, isPresented: $isPresented)
                         ListContainerView(array: vm.experienceArray, category: .work, size: .medium, isPresented: $isPresented)
+                        ListContainerView(array: vm.volunteerArray, category: .volunteer, size: .small, isPresented: $isPresented)
                     }
                 }
             }

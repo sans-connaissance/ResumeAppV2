@@ -47,6 +47,9 @@
 		4138BFAA27C138BE00A33680 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFA927C138BE00A33680 /* WorkDetailView.swift */; };
 		4138BFAB27C138BE00A33680 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFA927C138BE00A33680 /* WorkDetailView.swift */; };
 		4138BFAC27C138BE00A33680 /* WorkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFA927C138BE00A33680 /* WorkDetailView.swift */; };
+		4138BFAE27C1A34F00A33680 /* VolunteerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFAD27C1A34F00A33680 /* VolunteerDetailView.swift */; };
+		4138BFAF27C1A34F00A33680 /* VolunteerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFAD27C1A34F00A33680 /* VolunteerDetailView.swift */; };
+		4138BFB027C1A34F00A33680 /* VolunteerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138BFAD27C1A34F00A33680 /* VolunteerDetailView.swift */; };
 		414EC0CC27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CB27A37F5C00C1C25F /* ResumeHomeVM.swift */; };
 		414EC0CD27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CB27A37F5C00C1C25F /* ResumeHomeVM.swift */; };
 		414EC0CE27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EC0CB27A37F5C00C1C25F /* ResumeHomeVM.swift */; };
@@ -155,6 +158,7 @@
 		4125DDC527A37D5500DA70EB /* GlobalHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		4138BFA527BF4AEA00A33680 /* EducationCourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCourseListView.swift; sourceTree = "<group>"; };
 		4138BFA927C138BE00A33680 /* WorkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailView.swift; sourceTree = "<group>"; };
+		4138BFAD27C1A34F00A33680 /* VolunteerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerDetailView.swift; sourceTree = "<group>"; };
 		414EC0CB27A37F5C00C1C25F /* ResumeHomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeHomeVM.swift; sourceTree = "<group>"; };
 		414EC0CF27A3810B00C1C25F /* ResumeHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeHomeView.swift; sourceTree = "<group>"; };
 		414EC0D327A3894800C1C25F /* LargeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTopView.swift; sourceTree = "<group>"; };
@@ -401,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				4138BFA927C138BE00A33680 /* WorkDetailView.swift */,
+				4138BFAD27C1A34F00A33680 /* VolunteerDetailView.swift */,
 				4183807827A7062C00CCC136 /* EducationDetailView.swift */,
 				4138BFA527BF4AEA00A33680 /* EducationCourseListView.swift */,
 			);
@@ -558,6 +563,7 @@
 				4125DDBF27A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
 				4183805027A6E07B00CCC136 /* AwardListView.swift in Sources */,
 				4183804827A6C92400CCC136 /* WorkListView.swift in Sources */,
+				4138BFAE27C1A34F00A33680 /* VolunteerDetailView.swift in Sources */,
 				4125DD8727A0F4D500DA70EB /* ContentView.swift in Sources */,
 				4183807927A7062C00CCC136 /* EducationDetailView.swift in Sources */,
 				4125DD8527A0F4D500DA70EB /* ResumeApp2App.swift in Sources */,
@@ -604,6 +610,7 @@
 				414EC0CD27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */,
 				4157B6FE27AD73C600327674 /* FeaturedListView.swift in Sources */,
 				4125DDC027A37B9400DA70EB /* ResumeItemImageView.swift in Sources */,
+				4138BFAF27C1A34F00A33680 /* VolunteerDetailView.swift in Sources */,
 				4183805927A6E11F00CCC136 /* PublicationListView.swift in Sources */,
 				4183806D27A6E39300CCC136 /* ReferenceListView.swift in Sources */,
 				4183807A27A7062C00CCC136 /* EducationDetailView.swift in Sources */,
@@ -636,6 +643,7 @@
 				414EC0DF27A38C4300C1C25F /* WhiteButton.swift in Sources */,
 				4183805227A6E07B00CCC136 /* AwardListView.swift in Sources */,
 				414EC0CE27A37F5C00C1C25F /* ResumeHomeVM.swift in Sources */,
+				4138BFB027C1A34F00A33680 /* VolunteerDetailView.swift in Sources */,
 				4183807B27A7062C00CCC136 /* EducationDetailView.swift in Sources */,
 				4183805627A6E0E600CCC136 /* CertificateListView.swift in Sources */,
 				4138BFA827BF4AEA00A33680 /* EducationCourseListView.swift in Sources */,
