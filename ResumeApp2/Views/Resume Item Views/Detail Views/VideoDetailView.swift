@@ -15,7 +15,37 @@ struct VideoDetailView: View {
     let resumeItem: Video
     
     var body: some View {
-        Text("VideoDetailView")
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .center) {
+                /// TOP IMAGE
+                if let imageString = resumeItem.thumbnail {
+                    ResumeItemImageView(imageString: imageString)
+                        .frame(width: screen.width)
+                    // .padding(.top, -50)
+                }
+                VStack(alignment: .center) {
+                    if let name = resumeItem.name {
+                        Text(name)
+                            .font(.headline.smallCaps())
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                            .lineSpacing(-10)
+                    }
+                    if let videoURL = resumeItem.videoURL {
+                        ResumeItemImageView(imageString: videoURL)
+                            .frame(width: screen.width)
+                        // .padding(.top, -50)
+                    }
+                }.padding(.bottom, -1)
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing: Button {
+                isPresented = false
+            } label: {
+                Image(systemName: "x.circle.fill")
+                    .font(.title2)
+            })
+        }
     }
 }
 

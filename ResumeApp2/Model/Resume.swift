@@ -158,12 +158,12 @@ struct Reference: Identifiable, Hashable {
 
 struct Project: Identifiable, Hashable {
     var id: String
-    var name: String?
-    var description: String?
-    var highlights: [String]?
+    var name: String?//
+    var description: String?//
+    var highlights: [String]?//add to detail
     var keywords: [String]?
-    var startDate: String?
-    var endDate: String?
+    var startDate: String?//
+    var endDate: String?//
     var url: String?
     var roles: [String]?
     var entity: String?

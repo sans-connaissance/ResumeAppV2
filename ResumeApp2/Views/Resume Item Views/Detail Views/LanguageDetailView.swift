@@ -15,7 +15,38 @@ struct LanguageDetailView: View {
     let resumeItem: Language
     
     var body: some View {
-        Text("LanguageDetailView")
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .center) {
+                /// TOP IMAGE
+                if let imageString = resumeItem.thumbnail {
+                    ResumeItemImageView(imageString: imageString)
+                        .frame(width: screen.width)
+                    // .padding(.top, -50)
+                }
+                VStack(alignment: .center) {
+                    if let language = resumeItem.language {
+                        Text(language)
+                            .font(.headline.smallCaps())
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                            .lineSpacing(-10)
+                    }
+                    if let fluency = resumeItem.fluency {
+                        Text(fluency)
+                            .font(.headline.smallCaps())
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                    }
+                }.padding(.bottom, -1)
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing: Button {
+                isPresented = false
+            } label: {
+                Image(systemName: "x.circle.fill")
+                    .font(.title2)
+            })
+        }
     }
 }
 
