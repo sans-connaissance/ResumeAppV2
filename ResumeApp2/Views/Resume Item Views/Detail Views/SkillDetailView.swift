@@ -21,6 +21,6 @@ struct SkillDetailView: View {
 
 struct SkillDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SkillDetailView()
+        SkillDetailView(isPresented: .constant(true), resumeItem: operations)
     }
 }

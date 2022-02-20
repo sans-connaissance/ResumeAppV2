@@ -21,6 +21,6 @@ struct InterestDetailView: View {
 
 struct InterestDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        InterestDetailView()
+        InterestDetailView(isPresented: .constant(true), resumeItem: programming)
     }
 }

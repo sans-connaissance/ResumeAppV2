@@ -21,6 +21,6 @@ struct AwardDetailView: View {
 
 struct AwardDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AwardDetailView()
+        AwardDetailView(isPresented: .constant(true), resumeItem: phiKappaPhi)
     }
 }

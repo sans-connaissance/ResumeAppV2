@@ -21,6 +21,6 @@ struct PublicationDetailView: View {
 
 struct PublicationDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PublicationDetailView()
+        PublicationDetailView(isPresented: .constant(true), resumeItem: medAndSciencePub)
     }
 }

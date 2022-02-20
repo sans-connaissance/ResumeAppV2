@@ -21,6 +21,6 @@ struct ReferenceDetailView: View {
 
 struct ReferenceDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ReferenceDetailView()
+        ReferenceDetailView(isPresented: .constant(true), resumeItem: katie)
     }
 }

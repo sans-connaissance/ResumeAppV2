@@ -21,6 +21,6 @@ struct VideoDetailView: View {
 
 struct VideoDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoDetailView()
+        VideoDetailView(isPresented: .constant(true), resumeItem: testVideo)
     }
 }

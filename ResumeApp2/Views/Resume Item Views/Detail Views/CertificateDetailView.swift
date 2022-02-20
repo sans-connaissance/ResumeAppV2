@@ -21,6 +21,6 @@ struct CertificateDetailView: View {
 
 struct CertificateDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        CertificateDetailView()
+        CertificateDetailView(isPresented: .constant(true), resumeItem: leBienLeJusteCert)
     }
 }

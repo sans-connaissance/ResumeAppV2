@@ -21,6 +21,6 @@ struct LanguageDetailView: View {
 
 struct LanguageDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LanguageDetailView()
+        LanguageDetailView(isPresented: .constant(true), resumeItem: french)
     }
 }

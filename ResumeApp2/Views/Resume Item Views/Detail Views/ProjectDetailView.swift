@@ -21,6 +21,6 @@ struct ProjectDetailView: View {
 
 struct ProjectDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectDetailView()
+        ProjectDetailView(isPresented: .constant(true), resumeItem: umSalaryPub)
     }
 }
