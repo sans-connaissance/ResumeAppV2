@@ -15,7 +15,58 @@ struct CertificateDetailView: View {
     let resumeItem: Certificate
     
     var body: some View {
-        Text("CertificateDetailView")
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .center) {
+                /// TOP IMAGE
+                if let imageString = resumeItem.thumbnail {
+                    ResumeItemImageView(imageString: imageString)
+                        .frame(width: screen.width)
+                    // .padding(.top, -50)
+                }
+                VStack(alignment: .center) {
+                    if let name = resumeItem.name {
+                        Text(name)
+                            .font(.headline.smallCaps())
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                            .lineSpacing(-10)
+                    }
+                    if let issuer = resumeItem.issuer {
+                        Text(issuer)
+                            .font(.headline.smallCaps())
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                    }
+                }.padding(.bottom, -1)
+                
+                if let date = resumeItem.date {
+                    HStack {
+                        Text(date)
+                            .font(.caption2.lowercaseSmallCaps())
+                            .fontWeight(.regular)
+                    }
+                }
+                
+                if let url = resumeItem.url {
+                    HStack(spacing: 2) {
+                        Image(systemName: "globe")
+                            .font(.caption2)
+                        Link(destination: URL(string: url)!) {
+                            Text("Website")
+                                .font(.caption2)
+                                .fontWeight(.regular)
+                        }
+                    }
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing: Button {
+                isPresented = false
+            } label: {
+                Image(systemName: "x.circle.fill")
+                    .font(.title2)
+            })
+        }
     }
 }
 

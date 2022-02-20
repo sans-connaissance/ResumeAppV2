@@ -25,7 +25,7 @@ struct VideoListView: View {
                 LazyHStack(spacing: -6) {
                     ForEach(videoArray) { resumeItem in
                         NavigationLink {
-                            //ResumeItemDetailView(resumeItem: resumeItem)
+                            VideoDetailView(isPresented: $isPresented, resumeItem: resumeItem)
                         } label: {
                             VStack {
                                 if let imageString = resumeItem.thumbnail {

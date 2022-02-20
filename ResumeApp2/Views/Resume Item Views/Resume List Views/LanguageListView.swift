@@ -25,7 +25,7 @@ struct LanguageListView: View {
                 LazyHStack(spacing: -6) {
                     ForEach(languageArray) { resumeItem in
                         NavigationLink {
-                            //ResumeItemDetailView(resumeItem: resumeItem)
+                           LanguageDetailView(isPresented: $isPresented, resumeItem: resumeItem)
                         } label: {
                             VStack {
                                 if let imageString = resumeItem.thumbnail {

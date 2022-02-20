@@ -24,7 +24,6 @@ struct VolunteerDetailView: View {
                         .frame(width: screen.width)
                     // .padding(.top, -50)
                 }
-                /// DEPARTMENT AND POSITION
                 VStack(alignment: .center) {
                     if let organization = resumeItem.organization {
                         Text(organization)

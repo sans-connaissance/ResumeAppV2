@@ -15,7 +15,56 @@ struct SkillDetailView: View {
     let resumeItem: Skill
     
     var body: some View {
-        Text("SkillDetailView")
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .center) {
+                /// TOP IMAGE
+                if let imageString = resumeItem.thumbnail {
+                    ResumeItemImageView(imageString: imageString)
+                        .frame(width: screen.width)
+                    // .padding(.top, -50)
+                }
+                VStack(alignment: .center) {
+                    if let name = resumeItem.name {
+                        Text(name)
+                            .font(.headline.smallCaps())
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                            .lineSpacing(-10)
+                    }
+                    if let level = resumeItem.level {
+                        Text(level)
+                            .font(.headline.smallCaps())
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                    }
+                }.padding(.bottom, -1)
+                
+                
+                if let keywords = resumeItem.keywords {
+                    VStack(alignment: .leading) {
+                        Text("Keywords")
+                            .font(.caption2)
+                            .fontWeight(.bold)
+                        ForEach(keywords, id: \.self) { keyword in
+                            HStack {
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 5))
+                                Text(keyword)
+                                    .font(.caption2)
+                                    .fontWeight(.regular)
+                            }.padding(.bottom, 5)
+                        }
+                    }.padding()
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing: Button {
+                isPresented = false
+            } label: {
+                Image(systemName: "x.circle.fill")
+                    .font(.title2)
+            })
+        }
     }
 }
 

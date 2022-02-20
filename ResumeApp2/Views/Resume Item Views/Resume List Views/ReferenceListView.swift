@@ -25,7 +25,7 @@ struct ReferenceListView: View {
                 LazyHStack(spacing: -6) {
                     ForEach(referenceArray) { resumeItem in
                         NavigationLink {
-                            //ResumeItemDetailView(resumeItem: resumeItem)
+                            ReferenceDetailView(isPresented: $isPresented, resumeItem: resumeItem)
                         } label: {
                             VStack {
                                 if let imageString = resumeItem.thumbnail {
